@@ -181,10 +181,11 @@ body{
     font-size: 1rem;
 }
 
-.tweet-actions svg {
+.tweet-actions div svg {
     width: 1rem;
     height: auto;
-    color: #2F3336;
+    /* color: #2F3336; */
+    color: rgb(29, 155, 240);
 }
 
 .tweet-action{
@@ -192,4 +193,18 @@ body{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    cursor: pointer;
 }
+
+.tweet-react:hover{
+    color: rgb(249, 24, 128);
+}
+
+.tweet-retweet:hover{
+    color: rgb(0, 186, 124);
+}
+
+.tweet-reply:hover{
+    color: rgb(29, 155, 240);
+}
+
