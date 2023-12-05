@@ -182,9 +182,10 @@ body{
 }
 
 .tweet-actions div svg {
-    width: 1.3rem;
+    width: 2rem;
     height: auto;
     color: #2F3336;
+    border-radius: 50px;
     /* color: rgb(29, 155, 240); */
 }
 
@@ -199,20 +200,53 @@ body{
 .tweet-react:hover{
     color: rgb(249, 24, 128);
     stroke: rgb(249, 24, 128);
+    transition: all 1s;
+}
+
+.tweet-react:hover svg{
+    color: rgb(249, 24, 128);
+    stroke: rgb(249, 24, 128);
+    background-color: rgba(249, 24, 128, 0.5);
+    fill: rgba(249, 24, 128, 0.5);
+    transition: all 1s;
+    /* padding: 5px; */
 }
 
 .tweet-retweet:hover{
     color: rgb(0, 186, 124);
     stroke: rgb(0, 186, 124);
+    transition: all 1s;
+}
+
+.tweet-retweet:hover svg{
+    color: rgb(0, 186, 124);
+    stroke: rgb(0, 186, 124);
+    background-color: rgba(0, 186, 124, 0.5);
+    transition: all 1s;
 }
 
 .tweet-reply:hover{
     color: rgb(29, 155, 240);
     stroke: rgb(29, 155, 240);
+    transition: all 1s;
 }
 
-svg{
+.tweet-reply:hover svg{
+    color: rgb(29, 155, 240);
+    stroke: rgb(29, 155, 240);
+    fill: rgba(29, 155, 240, 0.5);
+    background-color: rgba(29, 155, 240, 0.5);
+    transition: all 1s;
+}
+
+/* svg{
+    width: 200px;
+    height: 200px;
+} */
+/* svg::after{
+    content: "";
     width: 100px;
     height: 100px;
-}
+    background-color: blue;
+} */
 

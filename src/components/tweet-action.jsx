@@ -1,12 +1,12 @@
 import SvgFile from "../images/svg-file";
 
 
-function TweetAction({imgsrc, actionCount, className, path,stroke}) {
+function TweetAction({imgsrc, actionCount, className, path}) {
     return (
         <div className={className}> 
-            <SvgFile path={path} stroke={stroke} />
+            <SvgFile path={path} />
             <p>{actionCount}</p>
-            <img src={imgsrc} alt="" /> 
+            {imgsrc && <img src={imgsrc} alt="" /> }
         </div>
     )
 }
