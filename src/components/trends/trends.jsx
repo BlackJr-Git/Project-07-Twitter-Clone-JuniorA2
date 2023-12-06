@@ -1,4 +1,4 @@
-import {TrendingList} from "../index.js";
+import {FollowList, TrendingList} from "../index.js";
 import SearchBox from "../search-box.jsx";
 
 
@@ -8,6 +8,7 @@ return (
         <div>
             <SearchBox />
             <TrendingList />
+            <FollowList />
         </div>
     </aside>
 )
