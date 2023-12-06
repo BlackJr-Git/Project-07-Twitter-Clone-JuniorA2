@@ -1,5 +1,5 @@
 // import Tweet from "./tweet";
-import { Tweet,TweetTitle } from "../components"
+import { Tweet,Navigation } from "../components"
 
 
 function Tweets() {
@@ -51,7 +51,6 @@ function Tweets() {
           tweetImage={"src\\images\\tweet-image.png"}
           reply = {"34K"} retweet={"247.7K"} react={"1.7M"} 
         />
-        
       </>
     )
 }

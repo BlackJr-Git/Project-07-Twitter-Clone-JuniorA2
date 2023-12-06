@@ -18,3 +18,7 @@ export { default as TweetTitle } from "./tweet/tweet-title";
 // export { default as TweetText } from "./tweet-text" ;
 // export { default as TweetTitleAuthor } from "./tweet-title-author" ;
 // export { default as TweetTitleDetails } from "./tweet-title-details" ;
+export { default as NavigationLink } from "./side-bar/navigation-link" ;
+export { default as Navigation } from "./side-bar/navigation" ;
+// export { default as Navigation } from "./side-bar/navigation" ;
+export {default as Logo } from "./side-bar/logo"
