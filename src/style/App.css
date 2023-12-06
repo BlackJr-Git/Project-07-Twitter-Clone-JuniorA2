@@ -400,5 +400,6 @@ svg{
 
 .active{
     fill: #D9D9D9;
+    background-color: red;
 }
 
