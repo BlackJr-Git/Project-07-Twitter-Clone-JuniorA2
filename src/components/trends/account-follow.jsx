@@ -1,10 +1,10 @@
 import TweetAvatar from "../tweet/tweet-avatar";
 import Button from "../button";
 
-function AccountFollow({userName, userTitle}) {
+function AccountFollow({userName, userTitle, imgSrc}) {
     return (
         <div className="account-follow"> 
-            <TweetAvatar imgsrc={"src\\images\\avatar-tweeter.png"} />
+            <TweetAvatar imgsrc={imgSrc} />
             <div className="user-info">
                 <p className="user-title"> {userTitle} </p>
                 <p className="user-name"> {userName} </p>

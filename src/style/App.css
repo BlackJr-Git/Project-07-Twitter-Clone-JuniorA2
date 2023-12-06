@@ -351,6 +351,9 @@ input[type=search]{
 
 .user-info{
     font-size: 0.8rem;
+    justify-self: start ;
+    justify-self: flex-start;
+    /* background-color: red; */
 }
 
 .button-follow {
@@ -361,5 +364,13 @@ input[type=search]{
     background-color: #D9D9D9;
     color: #050505;
     font-size: .8rem;
+}
+
+.tweet-avatar img {
+    max-width: 50px;
+}
+
+.user-title{
+    font-weight: bold;
 }
 
