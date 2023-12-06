@@ -1,5 +1,4 @@
-// import Tweet from "./tweet";
-import { Tweet,Navigation } from "../components"
+import { Tweet } from "../components"
 
 
 function Tweets() {

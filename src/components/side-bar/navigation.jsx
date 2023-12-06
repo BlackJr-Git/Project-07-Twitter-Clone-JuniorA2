@@ -4,7 +4,8 @@ import NavigationLink from "./navigation-link";
 
 function Navigation() {
   return (
-    <aside className="navbar">
+    <aside>
+    <div className="navbar">
         <Logo />
 
       <NavigationLink
@@ -53,6 +54,7 @@ function Navigation() {
         linkTexte={"Profile"}
       />
       <NavigationLink linkTexte={"More"} />
+    </div>
     </aside>
   );
 }
