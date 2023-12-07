@@ -2,14 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
-// import { Layout } from './components/index';
-// import {Layout} from "./components"
 import Layout from './components/layout';
-// import Home from './pages/home';
-// import Profile from './pages/profile';
-// import Notifications from './pages/notifications';
-// import Explore from './pages/explore';
-import {Home,Profile,Notifications,Explore} from "./pages"
+import {Home,Profile,Notifications,Explore, Messages, Bookmarks, Lists} from "./pages"
 
 const router = createBrowserRouter([
   {
@@ -33,8 +27,24 @@ const router = createBrowserRouter([
         element: <Notifications />,
       },
       {
+        path: "/messages",
+        element: <Messages />,
+      },
+      {
+        path: "/bookmarks",
+        element: <Bookmarks />,
+      },
+      {
+        path: "/lists",
+        element: <Lists />,
+      },
+      {
         path: "/profile",
         element: <Profile />,
+      },
+      {
+        path: "/more",
+        element: <Home />,
       },
     ]
   }
