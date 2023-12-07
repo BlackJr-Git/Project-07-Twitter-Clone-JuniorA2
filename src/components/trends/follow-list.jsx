@@ -1,4 +1,4 @@
-import AccountFollow from "./account-follow";
+import { AccountFollow } from "../index";
 
 function FollowList() {
     return (

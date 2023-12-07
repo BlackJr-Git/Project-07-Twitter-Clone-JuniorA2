@@ -1,6 +1,6 @@
-// import { NavigationLink } from "./navigation-link";
-import Logo from "./logo";
-import NavigationLink from "./navigation-link";
+// import Logo from "./logo";
+// import NavigationLink from "./navigation-link";
+import {Logo , NavigationLink } from "../index"
 
 function Navigation() {
   return (

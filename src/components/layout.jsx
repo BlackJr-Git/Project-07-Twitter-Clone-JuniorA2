@@ -1,6 +1,5 @@
 import React from 'react';
-import Navigation from './side-bar/navigation';
-import Trends from './trends/trends';
+import {Trends, Navigation } from './index'
 import { Outlet } from 'react-router-dom/dist';
 
 function Layout({children}) {

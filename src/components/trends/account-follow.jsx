@@ -1,5 +1,6 @@
-import TweetAvatar from "../tweet/tweet-avatar";
-import Button from "../button";
+// import TweetAvatar from "../tweet/tweet-avatar";
+// import Button from "../button";
+import { TweetAvatar , Button} from "../index"
 
 function AccountFollow({userName, userTitle, imgSrc}) {
     return (

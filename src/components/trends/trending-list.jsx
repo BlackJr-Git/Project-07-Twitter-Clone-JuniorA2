@@ -1,5 +1,7 @@
-import Trend from "./trend";
-import TrendListTitle from "./trend-list-title";
+import { Trend ,TrendListTitle } from "../index";
+// import TrendListTitle from "./trend-list-title";
+
+
 
 function TrendingList({ trendCountry }) {
   return (

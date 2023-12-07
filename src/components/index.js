@@ -20,3 +20,7 @@ export { default as Trend} from "./trends/trend" ;
 export { default as Trends} from "./trends/trends" ;
 export { default as FollowList} from "./trends/follow-list";
 export { default as TrendingList } from "./trends/trending-list";
+export { default as AccountFollow } from './trends/account-follow' ;
+export { default as ShowMore } from "./trends/show-more" ;
+export { default as TrendListTitle } from "./trends/trend-list-title" ;
+export { default as SearchBox } from "./search-box";
