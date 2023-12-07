@@ -5,7 +5,7 @@ import  { TweetEditor } from '../components';
 function Home() {
   return (
     <main className="timeline">
-      <Header />
+      <Header pageTitle={'Home'} />
       <TweetEditor />
       <Tweets />
     </main>

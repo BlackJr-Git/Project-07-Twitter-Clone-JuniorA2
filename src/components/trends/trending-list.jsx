@@ -1,9 +1,6 @@
 import { Trend ,TrendListTitle,ShowMore } from "../index";
-// import TrendListTitle from "./trend-list-title";
 
-
-
-function TrendingList({ trendCountry }) {
+function TrendingList() {
   return (
     <div className="trending-list">
       <TrendListTitle />

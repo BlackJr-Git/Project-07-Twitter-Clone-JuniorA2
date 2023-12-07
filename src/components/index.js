@@ -24,3 +24,6 @@ export { default as AccountFollow } from './trends/account-follow' ;
 export { default as ShowMore } from "./trends/show-more" ;
 export { default as TrendListTitle } from "./trends/trend-list-title" ;
 export { default as SearchBox } from "./search-box";
+export { default as ProfileHero } from "./profile/profile-hero" ;
+export { default as ProfilePicture } from "./profile/profile-picture" ;
+export { default as UserInfo } from "./profile/user-info" ;

@@ -5,6 +5,7 @@ import App from './App';
 import Home from './pages/home';
 import Layout from './components/layout';
 import { Tweets } from './components';
+import Profile from './pages/profile';
 
 const router = createBrowserRouter([
   {
@@ -20,8 +21,8 @@ const router = createBrowserRouter([
         element: <Home />,
       }, 
       {
-        path: "/notifications",
-        element: <Tweets />,
+        path: "/profile",
+        element: <Profile />,
       },
     ]
   }
