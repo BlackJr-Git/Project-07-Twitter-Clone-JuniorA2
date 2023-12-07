@@ -1,5 +1,5 @@
 import React from 'react';
-import {Trends, Navigation } from './index'
+import {Trends, Navigation, Header } from './index'
 import { Outlet } from 'react-router-dom/dist';
 
 function Layout({children}) {
@@ -7,7 +7,7 @@ function Layout({children}) {
         <>
             {/* <div className="left-sidebar"/> */}
             <Navigation />
-            {/* {children} */} <Outlet />
+             <Outlet /> {/* {children} */}
             <Trends />
             {/* <div className="right-sidebar" /> */}
         </>

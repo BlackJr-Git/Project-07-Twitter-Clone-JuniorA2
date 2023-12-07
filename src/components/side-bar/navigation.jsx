@@ -1,6 +1,4 @@
-// import Logo from "./logo";
-// import NavigationLink from "./navigation-link";
-import {Logo , NavigationLink } from "../index"
+import {Button, Logo , NavigationLink, ProfileSetting } from "../index"
 
 function Navigation() {
   return (
@@ -65,6 +63,10 @@ function Navigation() {
           linkTexte={"Profile"}
         />
         <NavigationLink linkTexte={"More"} link={"./more"} />
+
+        <Button texte={"Tweet"} className={"button nav-button"} />
+
+        <ProfileSetting imgSrc={"src\\images\\profile-photo.png"} userName={"@beadley_"} userTitle={"Bradley Ortiz"} />
       </div>
     </aside>
   );

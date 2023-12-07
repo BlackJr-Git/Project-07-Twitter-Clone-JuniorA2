@@ -245,7 +245,7 @@ body{
 .nav-link{
     display: flex;
     gap: 10px;
-    margin: 20px 0 ;
+    margin: 10px 0 ;
     color: #D9D9D9;
     font-weight: bold;
     font-size: 1rem;
@@ -382,6 +382,10 @@ input[type=search]{
     font-size: .8rem;
 }
 
+.nav-button{
+    width: 100% ;
+}
+
 .tweet-avatar img {
     max-width: 50px;
 }
@@ -451,5 +455,10 @@ button {
     height: 100px;
 }
 
-
+.profile-setting{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
 
