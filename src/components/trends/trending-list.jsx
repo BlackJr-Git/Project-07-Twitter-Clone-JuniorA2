@@ -1,4 +1,4 @@
-import { Trend ,TrendListTitle } from "../index";
+import { Trend ,TrendListTitle,ShowMore } from "../index";
 // import TrendListTitle from "./trend-list-title";
 
 
@@ -12,6 +12,7 @@ function TrendingList({ trendCountry }) {
       <Trend trendCountry={"England"} trendSubject={"#GTA VI"} />
       <Trend trendCountry={"Japan"} trendSubject={"#jjk"} />
       <Trend trendCountry={"DR Congo"} trendSubject={"#Election2023"} />
+      <ShowMore />
     </div>
   );
 }
