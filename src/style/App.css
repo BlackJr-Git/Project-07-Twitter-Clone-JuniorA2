@@ -489,3 +489,16 @@ footer a:hover{
     font-size: .8rem;
     color: #1D9BF0;
 }
+
+.error{
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.erreur-page{
+    padding : 0 50px ;
+}
+
+.erreur-page p{
+    margin: 50px;
+}

@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import Layout from './components/layout';
-import {Home,Profile,Notifications,Explore, Messages, Bookmarks, Lists, page404} from "./pages"
+import {Home,Profile,Notifications,Explore, Messages, Bookmarks, Lists, Page404} from "./pages" ;
+// import page404 from './pages/page-404';
 
 const router = createBrowserRouter([
   {
@@ -48,7 +49,7 @@ const router = createBrowserRouter([
           },
           {
             path: "/profile/*",
-            element: <page404 />,
+            element: <Page404 />,
           },
         ]
       },
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path: "*",
-        element: <page404 />,
+        element: <Page404 />,
       },
     ]
   }
