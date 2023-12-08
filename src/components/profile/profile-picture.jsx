@@ -1,8 +1,8 @@
 
-function ProfilePicture() {
+function ProfilePicture({imgSrc}) {
     return (
         <div className="profile-picture">
-            <img src="src\images\profile-photo.png" alt="profile-picture" />
+            <img src={imgSrc} alt="profile-picture" />
         </div>
     )
 }

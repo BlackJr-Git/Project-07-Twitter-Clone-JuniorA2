@@ -5,7 +5,7 @@ function Tweet({
 }) {
   return (
     <div className="tweet">
-      <TweetAvatar imgSrc={tweetData.tweetAvatarUrl} />
+      <TweetAvatar tweetData={tweetData.userName} imgSrc={tweetData.tweetAvatarUrl} />
       <TweetContent
         imgSrc={tweetData.tweetImageUrl}
         texte={tweetData.tweetText}
@@ -19,6 +19,8 @@ function Tweet({
     </div>
   );
 }
+
+
 
 
 

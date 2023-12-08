@@ -1,10 +1,14 @@
+import { Link } from "react-router-dom/dist";
 
-function TweetAvatar({imgSrc}) {
+
+function TweetAvatar({imgSrc,tweetData}) {
     return (
-        <div className="tweet-avatar"> 
-            <img src= {imgSrc} alt="avatar" />
-        </div>
+        <Link to={`/profile/${tweetData}`} >
+            <div className="tweet-avatar"> 
+                <img src= {imgSrc} alt="avatar" />
+            </div>
+        </Link>
     )
 }
 
-export default TweetAvatar;
+export default TweetAvatar ;

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import Layout from './components/layout';
-import {Home,Profile,Notifications,Explore, Messages, Bookmarks, Lists} from "./pages"
+import {Home,Profile,Notifications,Explore, Messages, Bookmarks, Lists, page404} from "./pages"
 
 const router = createBrowserRouter([
   {
@@ -41,10 +41,20 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile />,
+        children : [
+          {
+            path : '/profile/:userName',
+            element : <Profile />
+          },
+        ]
       },
       {
         path: "/more",
         element: <Home />,
+      },
+      {
+        path: "*",
+        element: <page404 />,
       },
     ]
   }

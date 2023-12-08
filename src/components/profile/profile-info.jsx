@@ -1,10 +1,10 @@
 import { UserInfo, Button } from "../index";
 
-function ProfileInfo() {
+function ProfileInfo({userName, userTitle}) {
     return (
         <section className="profil-info">
             <div className="user-id">
-                <UserInfo userName={"@bradley_"}  userTitle={"Bradley"}/>
+                <UserInfo userName={userName}  userTitle={userTitle}/>
                 <Button className={'button'} texte={'Editer le profile'} />
             </div>
             <div>
