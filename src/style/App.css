@@ -415,10 +415,6 @@ button {
     color: #FFFFFF;
 }
 
-.active svg{
-    
-}
-
 .show-more{
     color: rgb(29, 155, 240);
     background-color: transparent;
@@ -462,3 +458,31 @@ button {
     margin: 20px 0;
 }
 
+.user-id{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+.user-id div{
+    font-size: 1.2rem;
+}
+
+footer{
+    font-size: .8rem;
+    color: #6E767D;
+}
+
+footer a{
+    font-size: .8rem;
+    color: #6E767D;
+    margin: 3px;
+    text-decoration: none;
+}
+
+footer a:hover{
+    font-size: .8rem;
+    color: #1D9BF0;
+}

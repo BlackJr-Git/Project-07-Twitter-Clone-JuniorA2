@@ -24,7 +24,9 @@ export { default as AccountFollow } from './trends/account-follow' ;
 export { default as ShowMore } from "./trends/show-more" ;
 export { default as TrendListTitle } from "./trends/trend-list-title" ;
 export { default as SearchBox } from "./search-box";
+export { default as TwitterFooter } from "./twitter-footer"
 export { default as ProfileHero } from "./profile/profile-hero" ;
 export { default as ProfilePicture } from "./profile/profile-picture" ;
 export { default as UserInfo } from "./profile/user-info" ;
-export { default as ProfileSetting } from "./side-bar/profile-setting"
+export { default as ProfileSetting } from "./side-bar/profile-setting" ;
+export { default as ProfileInfo } from "./profile/profile-info" ;

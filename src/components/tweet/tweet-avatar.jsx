@@ -1,8 +1,8 @@
 
-function TweetAvatar({imgsrc}) {
+function TweetAvatar({imgSrc}) {
     return (
         <div className="tweet-avatar"> 
-            <img src= {imgsrc} alt="avatar" />
+            <img src= {imgSrc} alt="avatar" />
         </div>
     )
 }

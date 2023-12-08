@@ -2,7 +2,7 @@ import { TweetAction } from "..";
 
 function TweetContent({
   texte,
-  imgsrc,
+  imgSrc,
   author,
   userName,
   time,
@@ -23,9 +23,9 @@ function TweetContent({
 
         <p className="tweet-text"> {texte} </p>
 
-        {imgsrc && (
+        {imgSrc && (
           <div className="tweet-image">
-            <img src={imgsrc} alt="" />
+            <img src={imgSrc} alt="" />
           </div>
         )}
       </div>

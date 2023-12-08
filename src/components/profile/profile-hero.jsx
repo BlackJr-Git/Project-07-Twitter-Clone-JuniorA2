@@ -1,11 +1,14 @@
-import ProfilePicture from "./profile-picture";
+import { ProfileInfo, ProfilePicture } from "../index";
 
 function ProfileHero() {
-    return (
-        <section className="hero-section">
-            <ProfilePicture />
-        </section>
-    )
+  return (
+    <>
+      <section className="hero-section">
+        <ProfilePicture />
+      </section>
+      <ProfileInfo />
+    </>
+  );
 }
 
-export default ProfileHero ;
+export default ProfileHero;
