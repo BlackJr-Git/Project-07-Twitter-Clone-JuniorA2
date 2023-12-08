@@ -1,4 +1,5 @@
-import { TweetAction } from "..";
+import { TweetAction } from ".." ;
+import { verifiedIcon } from '../../images' ;
 
 function TweetContent({
   texte,
@@ -15,7 +16,7 @@ function TweetContent({
       <div className="tweet-body">
         <div className="tweet-title">
           <p className="tweet-title-author"> {author} </p>
-          <img src="src\images\Icons\Verified.png" alt="verfied icon" />
+          <img src={verifiedIcon} alt="verfied icon" />
           <p className="tweet-title-details">
             {userName} . {time}
           </p>

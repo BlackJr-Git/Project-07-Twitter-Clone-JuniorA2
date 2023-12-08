@@ -46,6 +46,10 @@ const router = createBrowserRouter([
             path : '/profile/:userName',
             element : <Profile />
           },
+          {
+            path: "/profile/*",
+            element: <page404 />,
+          },
         ]
       },
       {

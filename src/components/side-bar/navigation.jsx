@@ -1,4 +1,5 @@
-import {Button, Logo , NavigationLink, ProfileSetting } from "../index"
+import {Button, Logo , NavigationLink, ProfileSetting } from "../index" ;
+import { bradleyAvatar } from '../../images' ;
 
 function Navigation() {
   return (
@@ -66,7 +67,7 @@ function Navigation() {
 
         <Button texte={"Tweet"} className={"button nav-button"} />
 
-        <ProfileSetting imgSrc={"src\\images\\profile-photo.png"} userName={"@beadley_"} userTitle={"Bradley Ortiz"} />
+        <ProfileSetting imgSrc={bradleyAvatar} userName={"@beadley_"} userTitle={"Bradley Ortiz"} />
       </div>
     </aside>
   );

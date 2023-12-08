@@ -1,8 +1,9 @@
+import {twitterLogo} from '../../images'
 
 function Logo() {
     return (
         <div className="logo">
-            <img src="src\images\navbar-icons\twitter-logo.svg" alt="twitter-logo" />
+            <img src= {twitterLogo} alt="twitter-logo" />
         </div>
     )
 }
