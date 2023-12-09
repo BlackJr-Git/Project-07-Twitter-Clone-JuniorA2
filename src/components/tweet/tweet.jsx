@@ -1,8 +1,16 @@
 import { TweetAvatar, TweetContent } from "..";
+import { useState } from "react";
+
 
 function Tweet({
-  tweetData
+  tweetData ,addReactCount
 }) {
+  
+  const [like, setlike] = useState(tweetData.react)
+   const incrementLike = () => {
+     setlike(tweetData.incrementLike())
+  }
+  
   return (
     <div className="tweet">
       <TweetAvatar tweetData={tweetData.userName} imgSrc={tweetData.tweetAvatarUrl} />
@@ -14,7 +22,8 @@ function Tweet({
         time={tweetData.time}
         reply={tweetData.reply}
         retweet={tweetData.retweet}
-        react={tweetData.react}
+        react={like}
+        addReactCount={incrementLike}
       />
     </div>
   );

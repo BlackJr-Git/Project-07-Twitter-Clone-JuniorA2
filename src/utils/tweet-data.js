@@ -13,6 +13,10 @@ const tweetData = [
     reply: 57,
     retweet: 144,
     react: 184,
+    incrementLike() {
+      this.react = this.react  + 1 
+      return this.react
+    }
   },
   {
     id: 2,
@@ -26,6 +30,10 @@ const tweetData = [
     reply: 19,
     retweet: 48,
     react: 482,
+    incrementLike() {
+      this.react = this.react  + 1 
+      return this.react
+    }
   },
   {
     id: 3,
@@ -38,6 +46,10 @@ const tweetData = [
     reply: "6.8K",
     retweet: "36.6K",
     react: "267.1K",
+    incrementLike() {
+      this.react = this.react  + 1 
+      return this.react
+    }
   },
   {
     id: 4,
@@ -50,6 +62,10 @@ const tweetData = [
     reply: "118.7K",
     retweet: "785.4K",
     react: "3.3M",
+    incrementLike() {
+      this.react = this.react  + 1 
+      return this.react
+    }
   },
   {
     id: 5,
@@ -62,6 +78,10 @@ const tweetData = [
     reply: "34K",
     retweet: "247.7K",
     react: "1.7M",
+    incrementLike() {
+      this.react = this.react  + 1 
+      return this.react
+    }
   },
 ];
 

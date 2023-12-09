@@ -10,6 +10,7 @@ function TweetContent({
   reply,
   retweet,
   react,
+  addReactCount
 }) {
   return (
     <div className="tweet-content">
@@ -54,6 +55,7 @@ function TweetContent({
           }
           actionCount={react}
           className={"tweet-action tweet-react"}
+          handleClick={addReactCount}
         />
         
         <TweetAction
