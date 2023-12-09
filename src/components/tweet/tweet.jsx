@@ -20,21 +20,4 @@ function Tweet({
   );
 }
 
-
-
-
-
-
-
-// tweetData {id:5,
-//         tweetAvatarUrl:'src/images/image12.png',
-//         author : "Twitter",
-//         userName : "@twitter",
-//         time :"Oct 4" ,
-//         tweetText:"hello literally everyone",
-//         tweetImageUrl:"",
-//         Reply : "34K",
-//         Rettweet : "247.7K",
-//         React : "1.7M",}
-
 export default Tweet;

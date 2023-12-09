@@ -1,6 +1,4 @@
 import { FollowList, TrendingList , SearchBox,TwitterFooter } from "../index.js";
-// import SearchBox from "../search-box.jsx";
-
 
 function Trends() {
 return (

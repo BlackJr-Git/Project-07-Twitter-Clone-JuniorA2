@@ -1,4 +1,3 @@
-// import { TweetTitleAuthor,TweetTitleDetails } from "../components";
 
 function TweetTitle({Author}) {
     return (

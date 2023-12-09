@@ -10,10 +10,6 @@ function TweetBody({ texte, imgsrc }) {
         <div className="tweet-image">
           <img src={imgsrc} alt="" />
         </div>
-
-        {/* 
-                <TweetText />
-                <TweetImage /> */}
       </div>
     );
   } else {
@@ -21,10 +17,6 @@ function TweetBody({ texte, imgsrc }) {
       <div className="tweet-body">
         <TweetTitle />
         <p className="tweet-text"> {texte} </p>
-
-        {/* 
-                <TweetText />
-                <TweetImage /> */}
       </div>
     );
   }
