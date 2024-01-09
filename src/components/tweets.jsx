@@ -2,9 +2,10 @@ import { Tweet } from "../components"
 import { tweetData } from "../utils/tweet-data";
 
 function Tweets() {
+  const tweetDataCopy = [...tweetData]
   return (
     <div>
-      {tweetData.map(tweet => (
+      {tweetDataCopy.map(tweet => (
         <Tweet tweetData={tweet} key={tweet.id} />
       ))}
     </div>

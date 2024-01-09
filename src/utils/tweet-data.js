@@ -1,13 +1,27 @@
 import { twitterAvatar , nytimesAvatar ,cnnAvatar, tweetImage } from "../images" ;
 
 function incrementLike() {
-  this.react = this.react  + 1 
-  return this.react
+  if (this.isLiked == false) {
+    this.react = this.react  + 1 
+    this.isLiked = true 
+    return this.react
+  } else {
+    this.react = this.react - 1
+    this.isLiked = false  
+    return this.react
+  }
 }
 
 function incrementRetweet() {
-  this.retweet = this.retweet  + 1 
-  return this.retweet
+  if (this.isLiked == false) {
+    this.retweet = this.retweet  + 1 
+    this.isLiked = true 
+    return this.retweet
+  } else {
+    this.retweet = this.retweet - 1
+    this.isLiked = false  
+    return this.retweet
+  }
 }
 
 
@@ -25,6 +39,8 @@ const tweetData = [
     reply: 57,
     retweet: 144,
     react: 184,
+    isLiked : false,
+    isRetweet : false,
     incrementLike : incrementLike,
     incrementRetweet : incrementRetweet
   },
@@ -40,6 +56,8 @@ const tweetData = [
     reply: 19,
     retweet: 48,
     react: 482,
+    isLiked : false,
+    isRetweet : false,
     incrementLike : incrementLike,
     incrementRetweet : incrementRetweet
   },
@@ -54,6 +72,8 @@ const tweetData = [
     reply: "6.8K",
     retweet: "36.6K",
     react: "267.1K",
+    isLiked : false,
+    isRetweet : false,
     incrementLike : incrementLike,
     incrementRetweet : incrementRetweet
   },
@@ -68,6 +88,8 @@ const tweetData = [
     reply: "118.7K",
     retweet: "785.4K",
     react: "3.3M",
+    isLiked : false,
+    isRetweet : false,
     incrementLike : incrementLike,
     incrementRetweet : incrementRetweet
   },
@@ -82,6 +104,8 @@ const tweetData = [
     reply: "34K",
     retweet: "247.7K",
     react: "1.7M",
+    isLiked : false,
+    isRetweet : false,
     incrementLike : incrementLike,
     incrementRetweet : incrementRetweet
   },
