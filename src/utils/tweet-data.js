@@ -1,4 +1,4 @@
-import { twitterAvatar , nytimesAvatar ,cnnAvatar, tweetImage } from "../images" ;
+import { twitterAvatar , nytimesAvatar ,cnnAvatar, tweetImage, bradleyAvatar } from "../images" ;
 
 function incrementLike() {
   if (this.isLiked == false) {
@@ -101,6 +101,22 @@ const tweetData = [
     time: "Oct 4",
     tweetText: "hello literally everyone",
     tweetImageUrl: tweetImage,
+    reply: "34K",
+    retweet: "247.7K",
+    react: "1.7M",
+    isLiked : false,
+    isRetweet : false,
+    incrementLike : incrementLike,
+    incrementRetweet : incrementRetweet
+  },
+  {
+    id: 6,
+    tweetAvatarUrl: bradleyAvatar ,
+    author: "Bradley Ortiz",
+    userName: "@bradley_",
+    time: "Jan 10",
+    tweetText: "Hi I'm your new community manager",
+    tweetImageUrl: '' ,
     reply: "34K",
     retweet: "247.7K",
     react: "1.7M",
