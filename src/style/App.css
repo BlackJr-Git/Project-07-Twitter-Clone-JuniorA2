@@ -210,6 +210,12 @@ body{
     transition: all 1s;
 }
 
+.cliked-tweet-react {
+    color: rgb(249, 24, 128);
+    stroke: rgb(249, 24, 128);
+    transition: all 1s;
+}
+
 .tweet-retweet:hover{
     color: rgb(0, 186, 124);
     stroke: rgb(0, 186, 124);

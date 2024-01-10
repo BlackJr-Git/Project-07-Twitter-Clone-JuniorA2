@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import Layout from './components/layout';
 import {Home,Profile,Notifications,Explore, Messages, Bookmarks, Lists, Page404} from "./pages" ;
-// import page404 from './pages/page-404';
+
 
 const router = createBrowserRouter([
   {

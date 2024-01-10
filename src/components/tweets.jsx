@@ -1,7 +1,7 @@
 import { Tweet } from "../components"
-import { tweetData } from "../utils/tweet-data";
+// import { tweetData } from "../utils/tweet-data";
 
-function Tweets() {
+function Tweets({tweetData}) {
   const tweetDataCopy = [...tweetData]
   return (
     <div>
