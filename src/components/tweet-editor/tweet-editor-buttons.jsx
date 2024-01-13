@@ -1,11 +1,11 @@
 import { Button } from "..";
 import { TweetEditorActions } from "..";
 
-function TweetEditorButtons() {
+function TweetEditorButtons({handleClick}) {
   return (
     <div className="tweet-editor-buttons">
       <TweetEditorActions />
-      <Button texte={'Tweet'} className={'button'}/>
+      <Button texte={'Tweet'} className={'button'} handleClick={handleClick}/>
     </div>
   );
 }

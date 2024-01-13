@@ -2,8 +2,7 @@ import { Header, ProfileHero, Tweets } from "../components";
 import { tweetData } from "../utils/tweet-data";
 import { useParams } from "react-router-dom/dist";
 import { userData } from "../utils/user-data";
-import getTweet from "../utils/get-data";
-import getData from "../utils/get-data";
+
 
 function Profile() {
 
