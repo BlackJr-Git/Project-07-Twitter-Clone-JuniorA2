@@ -3,35 +3,18 @@ import { TweetEditorInput } from "..";
 import { TweetEditorButtons } from "..";
 import { bradleyAvatar } from "../../images";
 import { tweetData } from "../../utils/tweet-data";
+import { addTweet } from "../../utils/add-tweet";
 
 function TweetEditorForm({}) {
-  const lastTweet = tweetData.length - 1 
+  
   const [tweet , setTweet] = useState('')
   const [tweets , setTweets] = useState(tweetData)
   
   const handleClick = (e) => {
-    e.preventDefault() ;""
-    let key = tweetData[lastTweet].id + 1
-    
-    let newTweet = {
-      id : key ,
-      tweetAvatarUrl: bradleyAvatar,
-      author: "Bradley Ortiz",
-      userName: "@bradley_",
-      time: "1m",
-      tweetText: {tweet} ,
-      tweetImageUrl: "",
-      reply: 0,
-      retweet: 0,
-      react: 0,
-      isLiked : false,
-      isRetweet : false,
-      // incrementLike : incrementLike,
-      // incrementRetweet : incrementRetweet
-    } 
-
-    setTweets(tweetData.unshift(newTweet))
-    
+    e.preventDefault() ;
+    addTweet(tweetData, tweet)
+    setTweets(tweetData)
+    console.log(tweetData);
   }
 
   const handleMessageChange = (e) => {
