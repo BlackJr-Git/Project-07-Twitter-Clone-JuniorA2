@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { TweetEditorInput } from "..";
+import { TweetEditorInput , Tweets } from "..";
 import { TweetEditorButtons } from "..";
-import { bradleyAvatar } from "../../images";
 import { tweetData } from "../../utils/tweet-data";
 import { addTweet } from "../../utils/add-tweet";
+
 
 function TweetEditorForm({}) {
   
@@ -12,22 +12,23 @@ function TweetEditorForm({}) {
   
   const handleClick = (e) => {
     e.preventDefault() ;
-    addTweet(tweetData, tweet)
-    setTweets(tweetData)
-    console.log(tweetData);
+    let tweetAdded = addTweet(tweetData, tweet)
+    setTweets([...tweets , tweetAdded ]) ;  
+    setTweet("")
   }
 
   const handleMessageChange = (e) => {
     setTweet(e.target.value) 
   }
 
-
+    
   return (
     <div className="tweet-editor-form">
       <TweetEditorInput getTweetText={handleMessageChange} />
       <TweetEditorButtons handleClick={handleClick} />
+      <Tweets tweetData={tweets} />
     </div>
   );
 }
 
-export default TweetEditorForm;
+export default TweetEditorForm ; 

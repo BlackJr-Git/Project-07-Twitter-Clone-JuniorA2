@@ -11,5 +11,4 @@ function Tweets({tweetData}) {
     </div>
   );
 }
-
   export default Tweets;
