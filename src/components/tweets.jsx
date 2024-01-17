@@ -1,8 +1,7 @@
 import { Tweet } from "../components"
-// import { tweetData } from "../utils/tweet-data";
 
 function Tweets({tweetData}) {
-  const tweetDataCopy = [...tweetData]
+  const tweetDataCopy = [...tweetData] 
   return (
     <div>
       {tweetDataCopy.map(tweet => (

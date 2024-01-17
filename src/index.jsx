@@ -4,12 +4,15 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import Layout from './components/layout';
 import {Home,Profile,Notifications,Explore, Messages, Bookmarks, Lists, Page404} from "./pages" ;
+import TweetProvider from './contexts/tweet-provider';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <TweetProvider>  
+                  <Layout />
+              </TweetProvider> ,
     children : [
       {
         path: "/",

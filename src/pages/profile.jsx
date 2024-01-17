@@ -1,13 +1,16 @@
 import { Header, ProfileHero, Tweets } from "../components";
-import { tweetData } from "../utils/tweet-data";
+// import { tweetData } from "../utils/tweet-data";
 import { useParams } from "react-router-dom/dist";
 import { userData } from "../utils/user-data";
+import TweetContext from "../contexts/tweet-contexts";
+import { useContext } from "react";
 
 
 function Profile() {
+    const { data } = useContext(TweetContext) 
 
     const { userName } = useParams() ;
-    const data = tweetData ;
+    // const data = tweetData ;
     let user ;
 
     if (userName) {
@@ -16,7 +19,7 @@ function Profile() {
     if (userName === 'undefined') {
         user = userData
     } 
-    const tweetsOfUser = tweetData.filter(tweet => tweet.userName === user.userName);
+    const tweetsOfUser = data.filter(tweet => tweet.userName === user.userName);
 
     return (
         <main className="timeline">

@@ -27,7 +27,7 @@ function incrementRetweet() {
 function addTweet(tweetData, tweet) {
     
     const lastTweet = tweetData.length - 1 
-    let key = tweetData[lastTweet].id + 1
+    let key = tweetData[lastTweet].id + 1 
     let newTweet = {
         id : key ,
         tweetAvatarUrl: bradleyAvatar,
@@ -44,9 +44,6 @@ function addTweet(tweetData, tweet) {
         incrementLike : incrementLike,
         incrementRetweet : incrementRetweet
     } 
-
-    // tweetData.push(newTweet) ;
-    // return tweetData ;
     return newTweet
 } 
 
