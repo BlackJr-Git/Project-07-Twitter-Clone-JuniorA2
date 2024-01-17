@@ -24,8 +24,6 @@ import { twitterAvatar , nytimesAvatar ,cnnAvatar, tweetImage, bradleyAvatar } f
 //   }
 // }
 
-
-
 const tweetData = [
   {
     id: 1,

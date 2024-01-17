@@ -13,8 +13,10 @@ function TweetEditorForm({}) {
   
   const handleClick = (e) => {
     e.preventDefault() ;
-    let tweetAdded = addTweet(data, tweet) 
-    updateTweetData([tweetAdded ,...data ]) ;  
+    if (tweet.trim() !== "") {
+      let tweetAdded = addTweet(data, tweet) 
+      updateTweetData([tweetAdded ,...data ]) ;  
+    } 
     setTweet("")
   }
 
@@ -24,7 +26,7 @@ function TweetEditorForm({}) {
 
   return (
     <div className="tweet-editor-form">
-      <TweetEditorInput getTweetText={handleMessageChange} />
+      <TweetEditorInput getTweetText={handleMessageChange} tweet={tweet} />
       <TweetEditorButtons handleClick={handleClick} />
     </div>
   );

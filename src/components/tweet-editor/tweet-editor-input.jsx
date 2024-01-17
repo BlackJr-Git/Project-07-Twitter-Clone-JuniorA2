@@ -1,5 +1,5 @@
 
-function TweetEditorInput({getTweetText}) {
+function TweetEditorInput({getTweetText , tweet}) {
     return (
         <input 
             className="tweet-editor-input" 
@@ -7,7 +7,9 @@ function TweetEditorInput({getTweetText}) {
             type="text" 
             name="tweet-input" 
             id="tweet-input" 
-            onChange={getTweetText}>
+            onChange={getTweetText}
+            value={tweet}
+            >
         </input>
     )
 }
