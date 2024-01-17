@@ -8,11 +8,38 @@ function Tweet({
   
   const [like, setlike] = useState(tweetData.react)
   const [retweet, setretweet] = useState(tweetData.retweet)
+
+  function toggleLike() {
+    if (tweetData.isLiked == false) {
+      tweetData.react = tweetData.react  + 1 
+      tweetData.isLiked = true 
+      return tweetData.react
+    } else {
+      tweetData.react = tweetData.react - 1
+      tweetData.isLiked = false   
+      return tweetData.react
+    }
+  }
+
+  function toggleRetweet() {
+    if (tweetData.isRetweet == false) {
+      tweetData.retweet = tweetData.retweet  + 1 
+      tweetData.isRetweet = true 
+      return tweetData.retweet
+    } else {
+      tweetData.retweet = tweetData.retweet - 1
+      tweetData.isRetweet = false  
+      return tweetData.retweet
+    }
+  }
+
+
+  
   const incrementLike = () => {
-     setlike(tweetData.incrementLike())
+     setlike(toggleLike())
   }
   const incrementRetweet = () => {
-    setretweet(tweetData.incrementRetweet())
+    setretweet(toggleRetweet())
  }
   
   return (

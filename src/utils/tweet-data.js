@@ -1,28 +1,28 @@
 import { twitterAvatar , nytimesAvatar ,cnnAvatar, tweetImage, bradleyAvatar } from "../images" ;
 
-function incrementLike() {
-  if (this.isLiked == false) {
-    this.react = this.react  + 1 
-    this.isLiked = true 
-    return this.react
-  } else {
-    this.react = this.react - 1
-    this.isLiked = false  
-    return this.react
-  }
-}
+// function incrementLike() {
+//   if (this.isLiked == false) {
+//     this.react = this.react  + 1 
+//     this.isLiked = true 
+//     return this.react
+//   } else {
+//     this.react = this.react - 1
+//     this.isLiked = false   
+//     return this.react
+//   }
+// }
 
-function incrementRetweet() {
-  if (this.isLiked == false) {
-    this.retweet = this.retweet  + 1 
-    this.isLiked = true 
-    return this.retweet
-  } else {
-    this.retweet = this.retweet - 1
-    this.isLiked = false  
-    return this.retweet
-  }
-}
+// function incrementRetweet() {
+//   if (this.isLiked == false) {
+//     this.retweet = this.retweet  + 1 
+//     this.isLiked = true 
+//     return this.retweet
+//   } else {
+//     this.retweet = this.retweet - 1
+//     this.isLiked = false  
+//     return this.retweet
+//   }
+// }
 
 
 
@@ -41,8 +41,8 @@ const tweetData = [
     react: 184,
     isLiked : false,
     isRetweet : false,
-    incrementLike : incrementLike,
-    incrementRetweet : incrementRetweet
+    // incrementLike : incrementLike,
+    // incrementRetweet : incrementRetweet
   },
   {
     id: 2,
@@ -58,8 +58,8 @@ const tweetData = [
     react: 482,
     isLiked : false,
     isRetweet : false,
-    incrementLike : incrementLike,
-    incrementRetweet : incrementRetweet
+    // incrementLike : incrementLike,
+    // incrementRetweet : incrementRetweet
   },
   {
     id: 3,
@@ -74,8 +74,8 @@ const tweetData = [
     react: "267.1K",
     isLiked : false,
     isRetweet : false,
-    incrementLike : incrementLike,
-    incrementRetweet : incrementRetweet
+    // incrementLike : incrementLike,
+    // incrementRetweet : incrementRetweet
   },
   {
     id: 4,
@@ -90,8 +90,8 @@ const tweetData = [
     react: "3.3M",
     isLiked : false,
     isRetweet : false,
-    incrementLike : incrementLike,
-    incrementRetweet : incrementRetweet
+    // incrementLike : incrementLike,
+    // incrementRetweet : incrementRetweet
   },
   {
     id: 5,
@@ -106,8 +106,8 @@ const tweetData = [
     react: "1.7M",
     isLiked : false,
     isRetweet : false,
-    incrementLike : incrementLike,
-    incrementRetweet : incrementRetweet
+    // incrementLike : incrementLike,
+    // incrementRetweet : incrementRetweet
   },
   {
     id: 6,
@@ -122,8 +122,8 @@ const tweetData = [
     react: "1.7M",
     isLiked : false,
     isRetweet : false,
-    incrementLike : incrementLike,
-    incrementRetweet : incrementRetweet
+    // incrementLike : incrementLike,
+    // incrementRetweet : incrementRetweet
   },
 ];
 

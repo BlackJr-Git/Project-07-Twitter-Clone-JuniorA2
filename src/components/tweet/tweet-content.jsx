@@ -48,7 +48,7 @@ function TweetContent({
           }
           actionCount={retweet}
           className={"tweet-action tweet-retweet"}
-          handleClick={addRetweetCount}
+          handleClick={addRetweetCount} 
         />
 
         <TweetAction

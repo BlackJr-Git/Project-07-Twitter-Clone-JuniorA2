@@ -1,28 +1,28 @@
 import { bradleyAvatar } from "../images"
 
-function incrementLike() {
-    if (this.isLiked == false) {
-      this.react = this.react  + 1 
-      this.isLiked = true 
-      return this.react
-    } else {
-      this.react = this.react - 1
-      this.isLiked = false  
-      return this.react
-    }
-  }
+// function incrementLike() {
+//     if (this.isLiked == false) {
+//       this.react = this.react  + 1 
+//       this.isLiked = true 
+//       return this.react
+//     } else {
+//       this.react = this.react - 1
+//       this.isLiked = false  
+//       return this.react
+//     }
+//   }
   
-function incrementRetweet() {
-    if (this.isLiked == false) {
-      this.retweet = this.retweet  + 1 
-      this.isLiked = true 
-      return this.retweet
-    } else {
-      this.retweet = this.retweet - 1
-      this.isLiked = false  
-      return this.retweet
-    }
-  }
+// function incrementRetweet() {
+//     if (this.isLiked == false) {
+//       this.retweet = this.retweet  + 1 
+//       this.isLiked = true 
+//       return this.retweet
+//     } else {
+//       this.retweet = this.retweet - 1
+//       this.isLiked = false  
+//       return this.retweet
+//     }
+//   }
 
 function addTweet(tweetData, tweet) {
     
@@ -41,8 +41,8 @@ function addTweet(tweetData, tweet) {
         react: 0,
         isLiked : false,
         isRetweet : false,
-        incrementLike : incrementLike,
-        incrementRetweet : incrementRetweet
+        // incrementLike : incrementLike,
+        // incrementRetweet : incrementRetweet
     } 
     return newTweet
 } 

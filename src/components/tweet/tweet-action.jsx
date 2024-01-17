@@ -9,4 +9,4 @@ function TweetAction({ actionCount, className, path, path2, handleClick }) {
   );
 }
 
-export default TweetAction;
+export default TweetAction ;
