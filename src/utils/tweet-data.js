@@ -1,28 +1,5 @@
 import { twitterAvatar , nytimesAvatar ,cnnAvatar, tweetImage, bradleyAvatar } from "../images" ;
 
-// function incrementLike() {
-//   if (this.isLiked == false) {
-//     this.react = this.react  + 1 
-//     this.isLiked = true 
-//     return this.react
-//   } else {
-//     this.react = this.react - 1
-//     this.isLiked = false   
-//     return this.react
-//   }
-// }
-
-// function incrementRetweet() {
-//   if (this.isLiked == false) {
-//     this.retweet = this.retweet  + 1 
-//     this.isLiked = true 
-//     return this.retweet
-//   } else {
-//     this.retweet = this.retweet - 1
-//     this.isLiked = false  
-//     return this.retweet
-//   }
-// }
 
 const tweetData = [
   {
@@ -56,8 +33,6 @@ const tweetData = [
     isLiked : false,
     isRetweet : false,
     likeIcone : 'heart-outline'
-    // incrementLike : incrementLike,
-    // incrementRetweet : incrementRetweet
   },
   {
     id: 3,
@@ -73,8 +48,6 @@ const tweetData = [
     isLiked : false,
     isRetweet : false,
     likeIcone : 'heart-outline'
-    // incrementLike : incrementLike,
-    // incrementRetweet : incrementRetweet
   },
   {
     id: 4,
@@ -90,8 +63,6 @@ const tweetData = [
     isLiked : false,
     isRetweet : false,
     likeIcone : 'heart-outline'
-    // incrementLike : incrementLike,
-    // incrementRetweet : incrementRetweet
   },
   {
     id: 5,
@@ -107,8 +78,6 @@ const tweetData = [
     isLiked : false,
     isRetweet : false,
     likeIcone : 'heart-outline'
-    // incrementLike : incrementLike,
-    // incrementRetweet : incrementRetweet
   },
   {
     id: 6,
@@ -124,8 +93,6 @@ const tweetData = [
     isLiked : false,
     isRetweet : false,
     likeIcone : 'heart-outline'
-    // incrementLike : incrementLike,
-    // incrementRetweet : incrementRetweet
   },
 ];
 

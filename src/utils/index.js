@@ -1,0 +1,1 @@
+export {default as initialData } from './initial-data.json' ;
