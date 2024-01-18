@@ -8,15 +8,18 @@ function Tweet({
   
   const [like, setlike] = useState(tweetData.react)
   const [retweet, setretweet] = useState(tweetData.retweet)
+  const [likeIcone, setLikeIcon] = useState('heart-outline')
 
   function toggleLike() {
     if (tweetData.isLiked == false) {
       tweetData.react = tweetData.react  + 1 
-      tweetData.isLiked = true 
+      tweetData.isLiked = true
+      setLikeIcon('heart')
       return tweetData.react
     } else {
       tweetData.react = tweetData.react - 1
-      tweetData.isLiked = false   
+      tweetData.isLiked = false  
+      setLikeIcon('heart-outline')
       return tweetData.react
     }
   }
@@ -56,6 +59,7 @@ function Tweet({
         react={like}
         addReactCount={incrementLike}
         addRetweetCount={incrementRetweet}
+        iconType={likeIcone}
       />
     </div>
   );

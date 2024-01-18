@@ -20,13 +20,13 @@ function TweetEditorForm({}) {
     setTweet("")
   }
 
-  const handleMessageChange = (e) => {
+  const handleTextChange = (e) => {
     setTweet(e.target.value) 
   }
 
   return (
     <div className="tweet-editor-form">
-      <TweetEditorInput getTweetText={handleMessageChange} tweet={tweet} />
+      <TweetEditorInput getTweetText={handleTextChange} tweet={tweet} />
       <TweetEditorButtons handleClick={handleClick} />
     </div>
   );

@@ -8,18 +8,16 @@ import { useContext } from "react";
 
 function Profile() {
     const { data } = useContext(TweetContext) 
-
     const { userName } = useParams() ;
-    // const data = tweetData ;
-    let user ;
+    let user = userData  
 
     if (userName) {
-        user = data.find((user) => user.userName === userName) ; 
+       user = data.find((user) => user.userName === userName) ; 
     } 
     if (userName === 'undefined') {
         user = userData
     } 
-    const tweetsOfUser = data.filter(tweet => tweet.userName === user.userName);
+    const tweetsOfUser = data.filter(tweet => tweet.userName === user.userName) ; 
 
     return (
         <main className="timeline">

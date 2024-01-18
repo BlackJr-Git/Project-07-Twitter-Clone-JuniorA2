@@ -486,3 +486,12 @@ footer a:hover{
 .erreur-page p{
     margin: 50px;
 }
+
+ion-icon[name = 'heart'] {
+    font-size: 20px;
+    color: rgb(249, 24, 128);
+}
+
+ion-icon[name = 'heart-outline'] {
+    font-size: 20px;
+}
