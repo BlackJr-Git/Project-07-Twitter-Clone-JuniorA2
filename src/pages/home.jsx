@@ -6,7 +6,7 @@ import TweetContext from '../contexts/tweet-contexts';
 import { useContext } from 'react';
 
 function Home() {
-  const {data , updateTweetData} = useContext(TweetContext) 
+  const { data } = useContext(TweetContext) 
   return (
     <main className="timeline">
       <Header pageTitle={'Home'} />

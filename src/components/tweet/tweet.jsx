@@ -1,11 +1,13 @@
 import { TweetAvatar, TweetContent } from "..";
 import { useState } from "react";
+import { useContext } from 'react';
+import TweetContext from "../../contexts/tweet-contexts";
 
 
 function Tweet({
   tweetData
 }) {
-  
+  const { data } = useContext(TweetContext) 
   const [like, setlike] = useState(tweetData.react)
   const [retweet, setretweet] = useState(tweetData.retweet)
   const [likeIcone, setLikeIcon] = useState(tweetData.likeIcone) 
@@ -14,11 +16,13 @@ function Tweet({
     if (tweetData.isLiked == false) {
       tweetData.react = tweetData.react  + 1 
       tweetData.isLiked = true
+      tweetData.likeIcone = 'heart'
       setLikeIcon('heart')
       return tweetData.react
     } else {
       tweetData.react = tweetData.react - 1
       tweetData.isLiked = false  
+      tweetData.likeIcone = 'heart-outline'
       setLikeIcon('heart-outline')
       return tweetData.react
     }
