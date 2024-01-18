@@ -41,6 +41,7 @@ function addTweet(tweetData, tweet) {
         react: 0,
         isLiked : false,
         isRetweet : false,
+        likeIcone : 'heart-outline'
         // incrementLike : incrementLike,
         // incrementRetweet : incrementRetweet
     } 

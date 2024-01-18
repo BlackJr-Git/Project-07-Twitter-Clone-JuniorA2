@@ -7,8 +7,6 @@ function TweetAction({ actionCount, className, path, path2, handleClick, icone }
   } else {
     actionIcon =<SvgFile path={path} path2={path2} /> 
   }
-  
-  
   return (
     <div className={className} onClick={handleClick}>
       {actionIcon}

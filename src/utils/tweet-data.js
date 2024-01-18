@@ -39,8 +39,7 @@ const tweetData = [
     react: 184,
     isLiked : false,
     isRetweet : false,
-    // incrementLike : incrementLike,
-    // incrementRetweet : incrementRetweet
+    likeIcone : 'heart-outline'
   },
   {
     id: 2,
@@ -56,6 +55,7 @@ const tweetData = [
     react: 482,
     isLiked : false,
     isRetweet : false,
+    likeIcone : 'heart-outline'
     // incrementLike : incrementLike,
     // incrementRetweet : incrementRetweet
   },
@@ -72,6 +72,7 @@ const tweetData = [
     react: "267.1K",
     isLiked : false,
     isRetweet : false,
+    likeIcone : 'heart-outline'
     // incrementLike : incrementLike,
     // incrementRetweet : incrementRetweet
   },
@@ -88,6 +89,7 @@ const tweetData = [
     react: "3.3M",
     isLiked : false,
     isRetweet : false,
+    likeIcone : 'heart-outline'
     // incrementLike : incrementLike,
     // incrementRetweet : incrementRetweet
   },
@@ -104,6 +106,7 @@ const tweetData = [
     react: "1.7M",
     isLiked : false,
     isRetweet : false,
+    likeIcone : 'heart-outline'
     // incrementLike : incrementLike,
     // incrementRetweet : incrementRetweet
   },
@@ -120,6 +123,7 @@ const tweetData = [
     react: "1.7M",
     isLiked : false,
     isRetweet : false,
+    likeIcone : 'heart-outline'
     // incrementLike : incrementLike,
     // incrementRetweet : incrementRetweet
   },
