@@ -54,7 +54,7 @@
     },
     {
       "id": 4,
-      "tweetAvatarUrl": "src/images/twitter-avatar.png",
+      "tweetAvatarUrl": "src//images//twitter-avatar.png",
       "author": "Twitter",
       "userName": "@twitter",
       "time": "Oct 4",

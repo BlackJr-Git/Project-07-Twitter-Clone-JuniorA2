@@ -210,11 +210,11 @@ body{
     transition: all 1s;
 }
 
-.cliked-tweet-react {
+/* .cliked-tweet-react {
     color: rgb(249, 24, 128);
     stroke: rgb(249, 24, 128);
     transition: all 1s;
-}
+} */
 
 .tweet-retweet:hover{
     color: rgb(0, 186, 124);
@@ -490,8 +490,24 @@ footer a:hover{
 ion-icon[name = 'heart'] {
     font-size: 20px;
     color: rgb(249, 24, 128);
+    padding: 5px ;
+    border-radius: 50%;
 }
 
 ion-icon[name = 'heart-outline'] {
     font-size: 20px;
+    padding: 5px ;
+    border-radius: 50%;
+}
+
+ion-icon:hover {
+    color: rgb(249, 24, 128);
+    transition: all 1s;
+    background-color: rgba(249, 24, 128, 0.3);
+}
+
+.tweet-react:hover ion-icon{
+    color: rgb(249, 24, 128);
+    transition: all 1s;
+    background-color: rgba(249, 24, 128, 0.3);
 }

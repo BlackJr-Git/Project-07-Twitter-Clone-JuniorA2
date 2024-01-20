@@ -1,13 +1,13 @@
 import { TweetAvatar, TweetContent } from "..";
 import { useState } from "react";
-import { useContext } from 'react';
-import TweetContext from "../../contexts/tweet-contexts";
+// import { useContext } from 'react';
+// import TweetContext from "../../contexts/tweet-contexts";
 
 
 function Tweet({
   tweetData
 }) {
-  const { data } = useContext(TweetContext) 
+  // const { data } = useContext(TweetContext) 
   const [like, setlike] = useState(tweetData.react)
   const [retweet, setretweet] = useState(tweetData.retweet)
   const [likeIcone, setLikeIcon] = useState(tweetData.likeIcone) 

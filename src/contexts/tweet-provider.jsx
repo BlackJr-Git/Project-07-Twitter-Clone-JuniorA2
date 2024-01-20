@@ -1,6 +1,6 @@
 import TweetContext from "./tweet-contexts";
 import React, { useState } from "react";
-import { tweetData } from "../utils/tweet-data" ;
+// import { tweetData } from "../utils/tweet-data" ;
 import { fetchData } from "../utils/fetch-data";
 
 
@@ -22,4 +22,4 @@ const TweetProvider = ({ children }) => {
     );
   };
   
-  export default TweetProvider; 
+  export default TweetProvider ; 
