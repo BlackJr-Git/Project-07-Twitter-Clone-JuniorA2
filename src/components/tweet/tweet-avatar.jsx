@@ -11,4 +11,4 @@ function TweetAvatar({imgSrc,tweetData}) {
     )
 }
 
-export default TweetAvatar ;
+export default TweetAvatar ; 

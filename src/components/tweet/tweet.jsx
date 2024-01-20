@@ -1,5 +1,6 @@
 import { TweetAvatar, TweetContent } from "..";
 import { useState } from "react";
+import { numberFormatter } from "../../utils/number-formatter";
 // import { useContext } from 'react';
 // import TweetContext from "../../contexts/tweet-contexts";
 
@@ -8,8 +9,8 @@ function Tweet({
   tweetData
 }) {
   // const { data } = useContext(TweetContext) 
-  const [like, setlike] = useState(tweetData.react)
-  const [retweet, setretweet] = useState(tweetData.retweet)
+  const [like, setlike] = useState(numberFormatter(tweetData.react))
+  const [retweet, setretweet] = useState(numberFormatter(tweetData.retweet))
   const [likeIcone, setLikeIcon] = useState(tweetData.likeIcone) 
 
   function toggleLike() {
@@ -41,7 +42,8 @@ function Tweet({
   }
 
   const incrementLike = () => {
-     setlike(toggleLike())
+    let formatedNumber = numberFormatter(toggleLike())
+     setlike(formatedNumber)
   }
   const incrementRetweet = () => {
     setretweet(toggleRetweet())
@@ -56,7 +58,7 @@ function Tweet({
         author={tweetData.author}
         userName={tweetData.userName}
         time={tweetData.time}
-        reply={tweetData.reply}
+        reply={numberFormatter(tweetData.reply)}
         retweet={retweet}
         react={like}
         addReactCount={incrementLike}
