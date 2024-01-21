@@ -416,6 +416,8 @@ button {
     position: relative;
     width: 100%;
     height: 200px;
+    border: 1px solid white;
+    border-color: white ;
 }
 
 .profile-picture {
@@ -427,7 +429,7 @@ button {
     height: 105px;
     position: absolute;
     left: 20px;
-    top: 50px;
+    top: 150px;
     border: 5px solid white;
     background: red;
 }
@@ -443,6 +445,11 @@ button {
     align-items: center;
     justify-content: space-between;
     margin: 20px 0;
+}
+
+.profil-info{
+    margin-top: 50px;
+    border-bottom: 1px solid #2F3336 ;
 }
 
 .user-id{

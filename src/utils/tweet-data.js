@@ -89,7 +89,7 @@ const tweetData = [
     tweetImageUrl: '' ,
     reply: 12800,
     retweet: 56400,
-    react: 999998,
+    react: 989499,
     isLiked : false,
     isRetweet : false,
     likeIcone : 'heart-outline'
