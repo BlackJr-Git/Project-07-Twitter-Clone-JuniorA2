@@ -1,7 +1,7 @@
 import { Header, ProfileHero, Tweets } from "../components";
 // import { tweetData } from "../utils/tweet-data";
 import { useParams } from "react-router-dom/dist";
-import { userData } from "../utils/user-data";
+import { userData } from "../utils/user-data" ; 
 import TweetContext from "../contexts/tweet-contexts";
 import { useContext } from "react";
 
@@ -9,14 +9,12 @@ import { useContext } from "react";
 function Profile() {
     const { data } = useContext(TweetContext) 
     const { userName } = useParams() ;
-    let user = userData  
+    let user ;
 
     if (userName) {
-       user = data.find((user) => user.userName === userName) ; 
+        user = data.find((user) => user.userName === userName) ; 
     } 
-    if (userName === 'undefined') {
-        user = userData
-    } 
+
     const tweetsOfUser = data.filter(tweet => tweet.userName === user.userName) ; 
 
     return (

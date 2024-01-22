@@ -1,10 +1,4 @@
-// import { initialData } from ".";
-// async function fetchData()  {
-//     const response = await fetch('src/utils/initial-data.json');
-//     const data = await response.json()
-//     return data
-// }
-const initialData = "src/utils/initial-data.json" 
+const initialData = "src/data/initial-data.json" 
 
 async function fetchData() {
     try {
