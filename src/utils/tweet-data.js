@@ -82,7 +82,7 @@ const tweetData = [
   {
     id: 6,
     tweetAvatarUrl: bradleyAvatar ,
-    author: "Bradley Ortiz",
+    author: "Bradley Ortiz",    
     userName: "@bradley_",
     time: "Jan 10",
     tweetText: "Hi I'm your new community manager",

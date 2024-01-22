@@ -4,7 +4,7 @@
 //     const data = await response.json()
 //     return data
 // }
-const initialData = "src//utils//initial-data.json" 
+const initialData = "src/utils/initial-data.json" 
 
 async function fetchData() {
     try {
@@ -15,6 +15,7 @@ async function fetchData() {
       }
   
       const data = await response.json();
+      console.log(data);
       return data;
     } catch (error) {
       console.error('Erreur lors de la récupération des données:', error) ;
