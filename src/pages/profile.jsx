@@ -13,7 +13,9 @@ function Profile() {
 
     if (userName) {
         user = data.find((user) => user.userName === userName) ; 
-    } 
+    } else {
+        user = userData
+    }
 
     const tweetsOfUser = data.filter(tweet => tweet.userName === user.userName) ; 
 

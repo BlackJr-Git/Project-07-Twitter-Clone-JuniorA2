@@ -14,5 +14,5 @@ function FollowList() {
         </div>
     )
 }
- 
+
 export default FollowList ; 
