@@ -6,4 +6,4 @@ const userData = {
     userName : "@bradley_",
 }
 
-export {userData } ;
+export { userData } ;
