@@ -1,35 +1,41 @@
-import { useState } from "react";
-import { useContext } from "react";
-import { TweetEditorInput , TweetEditorButtons   } from "..";
-// import { } from "..";
+import { useState, useContext } from "react";
+import { TweetEditorInput, TweetEditorButtons } from "..";
 import { addTweet } from "../../utils/add-tweet";
 import TweetContext from "../../contexts/tweet-contexts";
-
+import { useForm } from "react-hook-form";
 
 function TweetEditorForm({}) {
-  const {data , updateTweetData} = useContext(TweetContext)  
-  
-  const [tweet , setTweet] = useState('')
-  
-  const handleClick = (e) => {
-    e.preventDefault() ;
-    if (tweet.trim() !== "") {
-      let tweetAdded = addTweet(data, tweet) 
-      updateTweetData([tweetAdded ,...data ]) ;  
-    } 
-    setTweet("")
-  }
+  const { data, updateTweetData } = useContext(TweetContext);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const [tweet, setTweet] = useState("");
+
+  const handleClick = (formData, e) => {
+    // e.preventDefault();
+    // console.log(formData);
+    let tweetAdded = addTweet(data, formData.tweetInput);
+    updateTweetData([tweetAdded, ...data]);
+    e.target.reset
+    setTweet("");
+  };
 
   const handleTextChange = (e) => {
-    setTweet(e.target.value) 
-  }
+    setTweet(e.target.value);
+  };
 
   return (
     <div className="tweet-editor-form">
-      <TweetEditorInput getTweetText={handleTextChange} tweet={tweet} />
-      <TweetEditorButtons handleClick={handleClick} />
+      <form onSubmit={handleSubmit(handleClick)}>
+        <TweetEditorInput registerFunction={register} />
+        <TweetEditorButtons />
+      </form>
+      {errors.tweetInput && <div style={{color : "red" }}>{errors.tweetInput.message}</div> }
     </div>
   );
 }
 
-export default TweetEditorForm ; 
+export default TweetEditorForm;

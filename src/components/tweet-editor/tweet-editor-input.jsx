@@ -1,16 +1,23 @@
 
-function TweetEditorInput({getTweetText , tweet}) {
-    return (
-        <input 
-            className="tweet-editor-input" 
-            placeholder="What's happening ?" 
-            type="text" 
-            name="tweet-input" 
-            id="tweet-input" 
-            onChange={getTweetText}
-            value={tweet}
-            >
-        </input>
-    )
+function TweetEditorInput({ getTweetText, registerFunction , characterCount }) {
+
+  return (
+    <>
+      <textarea
+        className="tweet-editor-input"
+        placeholder="What's happening ?"
+        type="text"
+        name="tweetInput"
+        id="tweet-input"
+        // onChange={getTweetText}
+        // value={tweet}
+        {...registerFunction("tweetInput", {
+          required: "Ajouter du texte dans votre tweet",
+          maxLength: 180,
+        })}
+      />
+      <p> {0 && characterCount}/180</p>
+    </>
+  );
 }
 export default TweetEditorInput;

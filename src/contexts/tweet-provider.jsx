@@ -1,17 +1,18 @@
 import TweetContext from "./tweet-contexts";
 import React, { useEffect, useState } from "react";
-import { tweetData } from "../utils/tweet-data" ;
+// import { tweetData } from "../utils/tweet-data" ;
 import { fetchData } from "../utils/fetch-data";
 
 
-// const tweetList = await fetchData() 
-const tweetLists = [...tweetData]
-let localTweetlist ;
+const tweetList = await fetchData() 
+// const tweetLists = [...tweetData]
+// let localTweetlist ;
 
 const TweetProvider = ({ children }) => {
-    // let data = [...tweetList.tweets]
+  // console.log(tweetList[0].tweets);
+    let data = tweetList[0].tweets
     
-    const [tweetData, setTweetData] = useState(tweetLists) ;
+    const [tweetData, setTweetData] = useState(data) ;
   
     const updateTweetData = (newData) => {
       setTweetData(newData);

@@ -1,4 +1,4 @@
-const initialData = "src/data/initial-data.json" 
+const initialData = "https://65bb938b52189914b5bc8c0a.mockapi.io/data" 
 
 async function fetchData() {
     try {

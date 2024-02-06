@@ -1,7 +1,7 @@
 
 function Button({texte, className, handleClick}) {
     return (
-        <button onClick={handleClick} className={className}> {texte} </button>
+        <button onClick={handleClick} className={className} type="submit"> {texte} </button>
     )
 }
 

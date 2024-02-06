@@ -1,11 +1,11 @@
 // import { createContext } from "react";
-import { tweetData } from "../utils/tweet-data" ;
+// import { tweetData } from "../utils/tweet-data" ; 
 import React, { createContext, useState } from 'react';
 
 
 
 const TweetContext = createContext({
-    data : tweetData ,
+    data : null ,
     // updateTweetData : updateTweetData , 
     // tweets : tweets
 });
