@@ -23,9 +23,9 @@ function TweetEditorForm({}) {
     setTweet("");
   };
 
-  const handleTextChange = (e) => {
-    setTweet(e.target.value);
-  };
+  // const handleTextChange = (e) => {
+  //   setTweet(e.target.value);
+  // };
 
   return (
     <div className="tweet-editor-form">

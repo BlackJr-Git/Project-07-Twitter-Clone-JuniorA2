@@ -9,8 +9,8 @@ const tweetList = await fetchData()
 // let localTweetlist ;
 
 const TweetProvider = ({ children }) => {
-  // console.log(tweetList[0].tweets);
-    let data = tweetList[0].tweets
+  // console.log(tweetList);
+    let data = tweetList
     
     const [tweetData, setTweetData] = useState(data) ;
   

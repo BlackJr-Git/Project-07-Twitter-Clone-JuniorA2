@@ -6,7 +6,7 @@ function addTweet(tweetData, tweet) {
     let key = tweetData[lastTweet].id + 1 
     let newTweet = {
         id : key ,
-        tweetAvatarUrl: bradleyAvatar,
+        tweetAvatarUrl: "https://i.imgur.com/G0Y3DkA.png" ,
         author: "Bradley Ortiz",
         userName: "@bradley_",
         time: "1m",
