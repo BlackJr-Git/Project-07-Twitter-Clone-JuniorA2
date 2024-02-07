@@ -2,7 +2,8 @@ import { useState, useContext } from "react";
 import { TweetEditorInput, TweetEditorButtons } from "..";
 import { addTweet } from "../../utils/add-tweet";
 import TweetContext from "../../contexts/tweet-contexts";
-import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form" ; 
+import { postData } from "../../utils";
 
 function TweetEditorForm({}) {
   const { data, updateTweetData } = useContext(TweetContext);
@@ -18,9 +19,10 @@ function TweetEditorForm({}) {
     // e.preventDefault();
     // console.log(formData);
     let tweetAdded = addTweet(data, formData.tweetInput);
+    postData(tweetAdded)
     updateTweetData([tweetAdded, ...data]);
-    e.target.reset
-    setTweet("");
+    // e.target.reset
+    // setTweet("");
   };
 
   // const handleTextChange = (e) => {

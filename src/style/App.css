@@ -561,7 +561,7 @@ ion-icon:hover {
     font-weight: bold ;
     font-size: 0.9rem ;
     text-decoration: none ;
-    border-radius: 15px ;
+    /* border-radius: 15px ; */
     padding: 10px 10px ;
     width: 100%;
 }
@@ -569,6 +569,10 @@ ion-icon:hover {
 .profile-navlink:hover{
     border-radius: 0 ;
     background-color: rgba(110, 118, 124, 0.2);
+}
+
+.active-link { 
+    border-bottom: 2px solid #1D9BF0 ;
 }
 
 
