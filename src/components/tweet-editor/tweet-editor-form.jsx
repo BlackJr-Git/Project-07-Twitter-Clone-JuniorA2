@@ -11,31 +11,43 @@ function TweetEditorForm({}) {
     register,
     handleSubmit,
     formState: { errors },
+    watch,
+    reset
   } = useForm();
 
-  const [tweet, setTweet] = useState("");
+  
+  const [characterCount , setCharacterCount] = useState(0) ;
+  // setCharacterCount(watch().tweetInput)
+
+
+  watch((data) => {
+    let tweet = data.tweetInput ; 
+    setCharacterCount(tweet.length) 
+  })
+
+
+  // watch((data, { name, type }) => console.log(data, name, type))
 
   const handleClick = (formData, e) => {
-    // e.preventDefault();
-    // console.log(formData);
     let tweetAdded = addTweet(data, formData.tweetInput);
     postData(tweetAdded)
-    updateTweetData([tweetAdded, ...data]);
-    // e.target.reset
-    // setTweet("");
+    updateTweetData([...data , tweetAdded ]);
+    reset({tweetInput : ""}) 
+    setCharacterCount(0) 
   };
 
   // const handleTextChange = (e) => {
-  //   setTweet(e.target.value);
+  //   setCharacterCount(e.target.value) ;
+  //   console.log(characterCount);
   // };
 
   return (
     <div className="tweet-editor-form">
       <form onSubmit={handleSubmit(handleClick)}>
-        <TweetEditorInput registerFunction={register} />
+        <TweetEditorInput registerFunction={register} characterCount={characterCount} />
         <TweetEditorButtons />
       </form>
-      {errors.tweetInput && <div style={{color : "red" }}>{errors.tweetInput.message}</div> }
+      {errors.tweetInput && <div className="error-message">{errors.tweetInput.message}</div> }
     </div>
   );
 }

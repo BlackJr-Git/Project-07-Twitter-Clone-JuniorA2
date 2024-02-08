@@ -9,7 +9,7 @@ async function fetchData() {
       }
   
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       return data;
     } catch (error) {
       console.error('Erreur lors de la récupération des données:', error) ;

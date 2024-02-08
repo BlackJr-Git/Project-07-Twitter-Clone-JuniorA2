@@ -14,9 +14,14 @@ function TweetEditorInput({ getTweetText, registerFunction , characterCount }) {
         {...registerFunction("tweetInput", {
           required: "Ajouter du texte dans votre tweet",
           maxLength: 180,
+          minLenght : 1 ,
+          pattern : {
+            value : /\S/ ,
+            message : "Ajouter du texte dans votre tweet"
+          }
         })}
       />
-      <p> {0 && characterCount}/180</p>
+        {characterCount > 180 ? <p className="character-count-error"> {characterCount}/180 </p> : <p className="character-count"> {characterCount}/180 </p> }
     </>
   );
 }

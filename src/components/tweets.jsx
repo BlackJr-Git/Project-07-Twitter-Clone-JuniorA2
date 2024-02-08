@@ -6,7 +6,7 @@ function Tweets({tweetData}) {
     <div>
       {tweetData.map(tweet => (
         <Tweet tweetData={tweet} key={tweet.id} />
-      ))}
+      )).reverse()}
     </div>
   );
 }
