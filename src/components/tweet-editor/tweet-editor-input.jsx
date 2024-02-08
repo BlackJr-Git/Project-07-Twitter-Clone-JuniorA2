@@ -21,8 +21,8 @@ function TweetEditorInput({ getTweetText, registerFunction , characterCount }) {
           }
         })}
       />
-        {characterCount > 180 ? <p className="character-count-error"> {characterCount}/180 </p> : <p className="character-count"> {characterCount}/180 </p> }
+        {characterCount > 180 ? <p className="text-red-600"> {characterCount}/180 </p> : <p className="character-count"> {characterCount}/180 </p> }
     </>
   );
 }
-export default TweetEditorInput;
+export default TweetEditorInput ;

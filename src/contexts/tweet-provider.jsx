@@ -5,11 +5,8 @@ import { fetchData } from "../utils/fetch-data";
 
 
 const tweetList = await fetchData() 
-// const tweetLists = [...tweetData]
-// let localTweetlist ;
 
 const TweetProvider = ({ children }) => {
-  // console.log(tweetList);
     let data = tweetList
     
     const [tweetData, setTweetData] = useState(data) ;
