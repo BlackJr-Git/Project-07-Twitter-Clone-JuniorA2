@@ -1,14 +1,14 @@
-import { bradleyAvatar } from "../images"
+import { bradleyAvatar } from "../images" 
 
-function addTweet(tweetData, tweet) {
+function addTweet(tweetData, tweet , currentUser) {
     
     const lastTweet = tweetData.length - 1 
     let key = tweetData[lastTweet].id + 1 
     let newTweet = {
         id : key ,
-        tweetAvatarUrl: "https://i.imgur.com/G0Y3DkA.png" ,
-        author: "Bradley Ortiz",
-        userName: "@bradley_",
+        tweetAvatarUrl: currentUser.tweetAvatarUrl,
+        author: currentUser.author,
+        userName: currentUser.userName,
         time: "1m",
         tweetText: tweet ,
         tweetImageUrl: "",

@@ -112,6 +112,8 @@ body{
     gap: 20px;
     padding: 1.5rem 1rem;
     border-bottom: 1px solid #2F3336;
+    max-width: 100%;
+    overflow-wrap: break-word ;
 }
 
 .tweet-avatar {
@@ -132,7 +134,9 @@ body{
     justify-content: flex-start;
     gap: 30px;
     width: 100%;
+    overflow-wrap: break-word ;
 }
+
 .tweet-body{
     display: flex;
     flex-direction: column;
@@ -159,6 +163,7 @@ body{
 .tweet-text{
     color: #D9D9D9;
     font-size: 1rem;
+    max-width: 100%;
 }
 
 .tweet-image{
@@ -589,5 +594,9 @@ ion-icon:hover {
     color: rgb(249, 24, 128) ;
 }
 
-
+.tweets{
+    /* max-width: 500px ; */
+    overflow-wrap: break-word ;
+    overflow: hidden;
+}
 

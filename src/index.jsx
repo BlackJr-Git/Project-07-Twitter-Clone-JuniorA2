@@ -5,14 +5,17 @@ import App from './App';
 import Layout from './components/layout';
 import {Home,Profile,Notifications,Explore, Messages, Bookmarks, Lists, Page404} from "./pages" ;
 import TweetProvider from './contexts/tweet-provider';
+import UserProvider from './contexts/user-Provider';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <TweetProvider>  
-                  <Layout />
-              </TweetProvider> ,
+    element: <UserProvider> 
+                  <TweetProvider>  
+                      <Layout />
+                  </TweetProvider> 
+              </UserProvider> ,
     children : [
       {
         path: "/",

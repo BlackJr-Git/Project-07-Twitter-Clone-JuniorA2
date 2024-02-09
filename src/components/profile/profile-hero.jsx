@@ -1,8 +1,11 @@
 import { ProfileInfo, ProfilePicture } from "../index";
 import { useParams } from "react-router-dom/dist";
-import { tweetData } from "../../utils/tweet-data";
-import { userData } from "../../utils/user-data" ;
+// import { tweetData } from "../../utils/tweet-data";
+// import { userData } from "../../utils/user-data" ;
 import {profileBackground} from "../../images" ;
+import UserContext from "../../contexts/user-context";
+import { useContext } from "react";
+import TweetContext from "../../contexts/tweet-contexts";
 
 function ProfileHero() {
   const backgroundStyles = {
@@ -10,9 +13,13 @@ function ProfileHero() {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };
+  const { currentUser } = useContext(UserContext) 
+  const { data } = useContext(TweetContext) 
   const { userName } = useParams() ;
-  const data = tweetData ;
+  // const data = tweetData ;
+
   const user = data.find((user) => user.userName === userName) ;
+  
   if (user) {
     return (
       <>
@@ -26,9 +33,9 @@ function ProfileHero() {
     return (
       <>
         <section className="hero-section" style={backgroundStyles}>
-          <ProfilePicture imgSrc={userData.tweetAvatarUrl} />
+          <ProfilePicture imgSrc={currentUser.tweetAvatarUrl} />
         </section>
-        <ProfileInfo userName={userData.userName} userTitle={userData.author} />
+        <ProfileInfo userName={currentUser.userName} userTitle={currentUser.author} />
       </>
     )
   }

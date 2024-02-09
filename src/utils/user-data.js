@@ -1,9 +1,9 @@
 import { bradleyAvatar } from '../images'
 const userData = {
     id: 6,
-    tweetAvatarUrl: bradleyAvatar ,
-    author : "Bradley Ortiz",
-    userName : "@bradley_",
+    tweetAvatarUrl: 'https://i.imgur.com/wfxoqxh.jpg' ,
+    author : "Junior Asosa",
+    userName : "@devjr",
 }
 
 export { userData } ;

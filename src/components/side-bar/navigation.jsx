@@ -1,7 +1,11 @@
 import {Button, Logo , NavigationLink, ProfileSetting } from "../index" ;
-import { bradleyAvatar } from '../../images' ;
+import { bradleyAvatar } from '../../images' ; 
+import { useContext } from "react";
+import UserContext from "../../contexts/user-context";
+
 
 function Navigation() {
+  const {currentUser } = useContext(UserContext)
   return (
     <aside>
       <div className="navbar">
@@ -67,10 +71,10 @@ function Navigation() {
 
         <Button texte={"Tweet"} className={"button nav-button"} />
 
-        <ProfileSetting imgSrc={bradleyAvatar} userName={"@beadley_"} userTitle={"Bradley Ortiz"} />
+        <ProfileSetting imgSrc={currentUser.tweetAvatarUrl} userName={currentUser.userName} userTitle={currentUser.author} />
       </div>
     </aside>
   );
 }
 
-export default Navigation;
+export default Navigation ; 

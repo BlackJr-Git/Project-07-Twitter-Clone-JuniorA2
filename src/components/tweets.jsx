@@ -3,7 +3,7 @@ import { Tweet } from "../components"
 function Tweets({tweetData}) {
   
   return (
-    <div>
+    <div className="tweets">
       {tweetData.map(tweet => (
         <Tweet tweetData={tweet} key={tweet.id} />
       )).reverse()}

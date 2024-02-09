@@ -2,52 +2,47 @@ import { useState, useContext } from "react";
 import { TweetEditorInput, TweetEditorButtons } from "..";
 import { addTweet } from "../../utils/add-tweet";
 import TweetContext from "../../contexts/tweet-contexts";
-import { useForm } from "react-hook-form" ; 
+import { useForm } from "react-hook-form";
 import { postData } from "../../utils";
+import UserContext from "../../contexts/user-context";
 
 function TweetEditorForm({}) {
   const { data, updateTweetData } = useContext(TweetContext);
+  const { currentUser } = useContext(UserContext);
+  const [characterCount, setCharacterCount] = useState(0);
   const {
     register,
     handleSubmit,
     formState: { errors },
     watch,
-    reset
+    reset,
   } = useForm();
 
-  
-  const [characterCount , setCharacterCount] = useState(0) ;
-  // setCharacterCount(watch().tweetInput)
-
-
   watch((data) => {
-    let tweet = data.tweetInput ; 
-    setCharacterCount(tweet.length) 
-  })
-
-
-  // watch((data, { name, type }) => console.log(data, name, type))
+    let tweet = data.tweetInput;
+    setCharacterCount(tweet.length);
+  });
 
   const handleClick = (formData, e) => {
-    let tweetAdded = addTweet(data, formData.tweetInput);
-    postData(tweetAdded)
-    updateTweetData([...data , tweetAdded ]);
-    reset({tweetInput : ""}) 
-    setCharacterCount(0) 
+    let tweetAdded = addTweet(data, formData.tweetInput, currentUser);
+    postData(tweetAdded);
+    updateTweetData([...data, tweetAdded]);
+    reset({ tweetInput: "" });
+    setCharacterCount(0);
   };
-
-  // const handleTextChange = (e) => {
-  //   setCharacterCount(e.target.value) ;
-  //   console.log(characterCount);
-  // };
 
   return (
     <div className="tweet-editor-form">
       <form onSubmit={handleSubmit(handleClick)}>
-        <TweetEditorInput registerFunction={register} characterCount={characterCount} />
+        <TweetEditorInput
+          registerFunction={register}
+          characterCount={characterCount}
+        />
         <TweetEditorButtons />
       </form>
-      {errors.tweetInput && <div className="error-message">{errors.tweetInput.message}</div> }
+      {errors.tweetInput && (
+        <div className="error-message">{errors.tweetInput.message}</div>
+      )}
     </div>
   );
 }
