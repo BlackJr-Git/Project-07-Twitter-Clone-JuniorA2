@@ -11,13 +11,9 @@ function Profile() {
     const { data } = useContext(TweetContext) 
     const { currentUser } = useContext(UserContext) 
     const { userName } = useParams() ;
-    let user ;
-
-    if (userName) {
-        user = data.find((user) => user.userName === userName) ;  
-    } else {
-        user = currentUser ;
-    }
+    
+    let user = data.find((user) => user.userName === userName) ; 
+    {user ?  user : user = currentUser ; }
 
     const tweetsOfUser = data.filter(tweet => tweet.userName === user.userName) ;  
 
@@ -25,7 +21,7 @@ function Profile() {
         <main className="timeline">
             <Header pageTitle={"Profile"} />
             <ProfileHero />
-            { tweetsOfUser ? <Tweets tweetData={tweetsOfUser} /> : <Tweets /> }
+            <Tweets tweetData={tweetsOfUser} /> 
         </main>
     )
 }
