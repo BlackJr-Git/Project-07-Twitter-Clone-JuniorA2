@@ -1,10 +1,9 @@
 import Button from "./button";
 
-function ReloadData() {
-    function reloadPage() {
-        location.reload()
-        // forceUpdate()
-    }
+function ReloadData({reloadPage}) {
+    // function reloadPage() {
+    //     location.reload()
+    // }
   return (
     <div className="w-96 m-auto p-6">
         <p className="text-center py-3">Un probleme est survenu lors de la recuperation de donne </p> 
