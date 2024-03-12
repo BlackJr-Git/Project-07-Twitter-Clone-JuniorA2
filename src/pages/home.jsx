@@ -1,17 +1,20 @@
-import React from 'react';
-import { Header, Tweets } from '../components';
-import  { TweetEditor } from '../components';
-// import { tweetData } from "../utils/tweet-data";
-import TweetContext from '../contexts/tweet-contexts';
-import { useContext } from 'react';
+import React from "react";
+import { Header, Tweets } from "../components";
+import { TweetEditor } from "../components";
+import TweetContext from "../contexts/tweet-contexts";
+import { useContext } from "react";
+import Loading from "../components/loading";
+import ReloadData from "../components/reload-data";
 
 function Home() {
-  const { data } = useContext(TweetContext) 
+  const { data, isLoading , isFailed } = useContext(TweetContext);
   return (
     <main className="timeline">
-      <Header pageTitle={'Home'} />
+      <Header pageTitle={"Home"} />
       <TweetEditor />
-      <Tweets tweetData={data}  />
+
+      {isLoading ? <Loading /> : <Tweets tweetData={data} />}
+      {isFailed && <ReloadData /> }
     </main>
   );
 }

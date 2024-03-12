@@ -8,4 +8,4 @@ function numberFormatter(number) {
     return numberFormatter.format(number) 
 }
 
-export { numberFormatter }
+export { numberFormatter } ;
