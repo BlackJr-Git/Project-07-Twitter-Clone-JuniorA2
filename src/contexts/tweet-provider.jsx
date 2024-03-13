@@ -1,6 +1,5 @@
 // import TweetContext from "./tweet-contexts";
 // import React, { useEffect, useState } from "react";
-// // import { tweetData } from "../utils/tweet-data" ;
 // import { fetchData } from "../utils/fetch-data";
 
 // const tweetList = await fetchData()
