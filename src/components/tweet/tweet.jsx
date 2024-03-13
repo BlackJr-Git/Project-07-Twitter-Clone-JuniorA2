@@ -9,26 +9,26 @@ function Tweet({ tweetData }) {
   const [retweet, setretweet] = useState(
     numberFormatter(tweetData.retweetCount)
   );
-  const [likeIcone, setLikeIcon] = useState(tweetData.likeIcone);
+  const [likeIcone, setLikeIcon] = useState("heart-outline");
 
   const [userData, setUserData] = useState({});
   const tweetUserData = `http://localhost:3000/api/user/${tweetData.author}`;
-
+  // console.log(tweetData.author);
   const [isLoading, setIsLoading] = useState(false);
 
   function toggleLike() {
     if (tweetData.isLiked == false) {
-      tweetData.react = tweetData.react + 1;
+      tweetData.favoriteCount = tweetData.favoriteCount + 1;
       tweetData.isLiked = true;
       tweetData.likeIcone = "heart";
       setLikeIcon("heart");
-      return tweetData.react;
+      return tweetData.favoriteCount;
     } else {
-      tweetData.react = tweetData.react - 1;
+      tweetData.favoriteCount = tweetData.favoriteCount - 1;
       tweetData.isLiked = false;
       tweetData.likeIcone = "heart-outline";
       setLikeIcon("heart-outline");
-      return tweetData.react;
+      return tweetData.favoriteCount;
     }
   }
 
@@ -77,7 +77,7 @@ function Tweet({ tweetData }) {
       ) : (
         <>
           <TweetAvatar
-            tweetData={userData.id}
+            tweetData={userData.handle}
             imgSrc={userData.profilePicture}
           />
           <TweetContent

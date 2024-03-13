@@ -169,12 +169,17 @@ body {
 .tweet-image {
   width: 100%;
   padding: 0.3rem 0 0 0;
+  /* aspect-ratio: 3/1; */
+  /* max-height: 300px; */
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50px;
 }
 
 .tweet-image img {
   max-width: 100%;
   height: auto;
-  max-height: 300px;
+  height: 300px;
   border-radius: 50px;
   border-color: #2f3336;
   border-style: solid;
@@ -454,7 +459,7 @@ button {
 
 .profil-info {
   margin-top: 50px;
-  border-bottom: 1px solid #2f3336;
+  /* border-bottom: 1px solid #2f3336; */
 }
 
 .user-id {
@@ -577,7 +582,7 @@ ion-icon:hover {
 }
 
 .active-link {
-  border-bottom: 2px solid #1d9bf0;
+  border-bottom: 4px solid #1d9bf0;
 }
 
 .error-message {
