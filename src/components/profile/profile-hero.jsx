@@ -7,12 +7,14 @@ import UserContext from "../../contexts/user-context";
 import { useContext } from "react";
 import TweetContext from "../../contexts/tweet-contexts";
 
-function ProfileHero() {
+function ProfileHero() { 
   const backgroundStyles = {
     background: `url(${profileBackground})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };
+
+  
   const { currentUser } = useContext(UserContext) 
   const { data } = useContext(TweetContext) 
   const { userName } = useParams() ;

@@ -12,7 +12,7 @@ function Tweet({ tweetData }) {
   const [likeIcone, setLikeIcon] = useState(tweetData.likeIcone);
 
   const [userData, setUserData] = useState({});
-  const tweetUserData = `http://localhost:3000/api/user/${tweetData.id}`;
+  const tweetUserData = `http://localhost:3000/api/user/${tweetData.author}`;
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -77,7 +77,7 @@ function Tweet({ tweetData }) {
       ) : (
         <>
           <TweetAvatar
-            tweetData={tweetData.author}
+            tweetData={userData.id}
             imgSrc={userData.profilePicture}
           />
           <TweetContent
