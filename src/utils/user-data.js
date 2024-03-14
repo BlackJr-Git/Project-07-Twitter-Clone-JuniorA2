@@ -1,5 +1,5 @@
 const userData = {
-    id: 6,
+    id: 1,
     tweetAvatarUrl: 'https://i.imgur.com/wfxoqxh.jpg' ,
     author : "Junior Asosa",
     userName : "@devjr",

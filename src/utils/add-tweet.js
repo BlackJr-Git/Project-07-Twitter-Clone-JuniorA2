@@ -1,23 +1,15 @@
-import { bradleyAvatar } from "../images" 
 
-function addTweet(tweetData, tweet , currentUser) {
-    
-    const lastTweet = tweetData.length - 1 
-    let key = tweetData[lastTweet].id + 1 
+let now = new Date()
+
+function addTweet(tweet , currentUser) {
     let newTweet = {
-        id : key ,
-        tweetAvatarUrl: currentUser.tweetAvatarUrl,
-        author: currentUser.author,
-        userName: currentUser.userName,
-        time: "1m",
-        tweetText: tweet ,
-        tweetImageUrl: "",
-        reply: 0,
-        retweet: 0,
-        react: 0,
-        isLiked : false,
-        isRetweet : false,
-        likeIcone : 'heart-outline'
+        "author": currentUser.id,
+        "media": [],
+        "retweetCount": 0,
+        "favoriteCount": 0,
+        "repliesCount": 0,
+        "text": tweet ,
+        "createdAt": now.toUTCString(),
     } 
     return newTweet
 } 
