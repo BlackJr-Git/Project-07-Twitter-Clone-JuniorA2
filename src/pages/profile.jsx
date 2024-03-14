@@ -31,7 +31,7 @@ function Profile() {
     };
 
     loadUserData();
-  }, []);
+  },[userName]);
 
   return (
     <main className="timeline">

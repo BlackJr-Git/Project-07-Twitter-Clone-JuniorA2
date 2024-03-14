@@ -1,5 +1,5 @@
 
-function TweetEditorInput({ getTweetText, registerFunction , characterCount }) {
+function TweetEditorInput({ registerFunction , characterCount }) {
 
   return (
     <>

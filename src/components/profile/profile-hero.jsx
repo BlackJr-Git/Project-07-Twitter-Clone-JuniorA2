@@ -26,7 +26,7 @@ function ProfileHero() {
     };
 
     loadUserData();
-  }, []);
+  }, [userName]);
 
   const user = userData;
 
