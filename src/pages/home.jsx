@@ -1,17 +1,25 @@
-import React from 'react';
-import { Header, Tweets } from '../components';
-import  { TweetEditor } from '../components';
-// import { tweetData } from "../utils/tweet-data";
-import TweetContext from '../contexts/tweet-contexts';
-import { useContext } from 'react';
+import { useState, useContext } from "react";
+import { Header, Tweets , TweetEditor, ReloadData , Loading } from "../components";
+import TweetContext from "../contexts/tweet-contexts";
 
 function Home() {
-  const { data } = useContext(TweetContext) 
+  const { data, isLoading, isFailed } = useContext(TweetContext);
+  const [reload , setReload ] = useState(true)
+  function reloadComponent() {
+    setReload(!reload)
+  }
+
+  // useEffect(() => {
+  //   console.log('Le composant a rendu');
+  // }, [reload])
+
   return (
     <main className="timeline">
-      <Header pageTitle={'Home'} />
+      <Header pageTitle={"Home"} />
       <TweetEditor />
-      <Tweets tweetData={data}  />
+
+      {isLoading ? <Loading /> : <Tweets tweetData={data} />}
+      {isFailed && <ReloadData reloadPage={reloadComponent} />}
     </main>
   );
 }

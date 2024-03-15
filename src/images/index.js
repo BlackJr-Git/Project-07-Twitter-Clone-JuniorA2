@@ -10,3 +10,4 @@ export { default as moreIcon } from './navbar-icons/more-button.png' ;
 export { default as settingIcon } from './navbar-icons/settings.png' ;
 export { default as verifiedIcon } from './Icons/Verified.png' ;
 export { default as profileBackground } from './profile-background.jpg' ;
+export { default as svgSpinners } from "./Icons/svg-spinners--180-ring-with-bg.svg"

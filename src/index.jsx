@@ -46,18 +46,8 @@ const router = createBrowserRouter([
         element: <Lists />,
       },
       {
-        path: "/profile",
+        path: "/:userName",
         element: <Profile /> ,
-        children : [
-          {
-            path : '/profile/:userName',
-            element : <Profile />
-          },
-          {
-            path: "/profile/*",
-            element: <Page404 />,
-          },
-        ]
       },
       {
         path: "/more",

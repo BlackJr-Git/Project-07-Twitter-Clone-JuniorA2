@@ -24,7 +24,7 @@ function TweetEditorForm({}) {
   });
 
   const handleClick = (formData, e) => {
-    let tweetAdded = addTweet(data, formData.tweetInput, currentUser);
+    let tweetAdded = addTweet(formData.tweetInput, currentUser);
     postData(tweetAdded);
     updateTweetData([...data, tweetAdded]);
     reset({ tweetInput: "" });

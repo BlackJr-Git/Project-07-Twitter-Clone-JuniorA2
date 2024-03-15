@@ -7,7 +7,7 @@ function ProfileSetting({imgSrc,userName,userTitle}) {
     const { currentUser } = useContext(UserContext) 
     return (
         <div className="profile-setting">
-            <TweetAvatar imgSrc={imgSrc} tweetData={currentUser.userName} />
+            <TweetAvatar imgSrc={imgSrc} tweetData={currentUser.handle} />
             <UserInfo userName={userName} userTitle={userTitle} />
         </div>
     )

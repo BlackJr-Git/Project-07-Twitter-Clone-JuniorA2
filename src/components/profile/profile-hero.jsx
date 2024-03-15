@@ -1,45 +1,64 @@
-import { ProfileInfo, ProfilePicture } from "../index";
+import { ProfileInfo, ProfilePicture, Loading } from "../index";
 import { useParams } from "react-router-dom/dist";
-// import { tweetData } from "../../utils/tweet-data";
-// import { userData } from "../../utils/user-data" ;
-import {profileBackground} from "../../images" ;
-import UserContext from "../../contexts/user-context";
-import { useContext } from "react";
-import TweetContext from "../../contexts/tweet-contexts";
+import { useState, useEffect } from "react";
+import fetchUserData from "../../utils/fetch-user-data";
+import { dateFormattter } from "../../utils";
 
 function ProfileHero() {
-  const backgroundStyles = {
-    background: `url(${profileBackground})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  };
-  const { currentUser } = useContext(UserContext) 
-  const { data } = useContext(TweetContext) 
-  const { userName } = useParams() ;
-  // const data = tweetData ;
+  const [userData, setUserData] = useState({});
+  const { userName } = useParams();
+  const [isLoading, setIsLoading] = useState(true);
+  const tweetUserData = `https://twitter-api-6zi0.onrender.com/api/user/userName/${userName}`;
 
-  const user = data.find((user) => user.userName === userName) ;
-  
-  if (user) {
-    return (
-      <>
-        <section className="hero-section" style={backgroundStyles}>
-          <ProfilePicture imgSrc={user.tweetAvatarUrl} />
-        </section>
-        <ProfileInfo userName={user.userName} userTitle={user.author} />
-      </>
-    );
-  } else {
-    return (
-      <>
-        <section className="hero-section" style={backgroundStyles}>
-          <ProfilePicture imgSrc={currentUser.tweetAvatarUrl} />
-        </section>
-        <ProfileInfo userName={currentUser.userName} userTitle={currentUser.author} />
-      </>
-    )
-  }
-   
+  useEffect(() => {
+    const loadUserData = async () => {
+      setIsLoading(true);
+      try {
+        const data = await fetchUserData(tweetUserData);
+        setUserData(data);
+        console.log(data);
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+        // setIsFailed(true);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadUserData();
+  }, [userName]);
+
+  const user = userData;
+
+  const backgroundStyles = {
+    background: `url(${user.profileBackground})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
+
+  return (
+    <>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <section className="hero-section" style={backgroundStyles}>
+            <ProfilePicture imgSrc={user.profilePicture} />
+          </section>
+          <ProfileInfo
+            date={dateFormattter(user.createdAt)}
+            link={user.website}
+            location={user.location}
+            userName={user.handle}
+            userTitle={user.name}
+            followersAccount={user.followersCount}
+            followingAcccount={user.followingCount}
+            bio={user.bio}
+          />
+        </>
+      )}
+    </>
+  );
 }
 
-export default ProfileHero ;
+export default ProfileHero;
