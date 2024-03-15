@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let postUrl = "http://localhost:3000/api/tweets/add";
+let postUrl = "https://twitter-api-6zi0.onrender.com/api/tweets/add";
 
 async function postData(tweet) {
   try {
@@ -12,4 +12,4 @@ async function postData(tweet) {
   }
 }
 
-export default postData;
+export default postData;  

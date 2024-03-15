@@ -14,7 +14,7 @@ function Profile() {
   const { userName } = useParams();
   const [userTweets, setUserTweet] = useState([]);
 
-  const userDataUrl = `http://localhost:3000/api/tweets/${userName}/tweets`;
+  const userDataUrl = `https://twitter-api-6zi0.onrender.com/api/tweets/${userName}/tweets`;
 
   useEffect(() => {
     const loadUserData = async () => {

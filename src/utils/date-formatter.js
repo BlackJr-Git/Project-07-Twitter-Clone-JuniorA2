@@ -8,7 +8,7 @@ function dateFormatter(date) {
 
   const totalTimeSincePosted = new Date(date);
   const now = new Date();
-  let timeDifference = Math.abs(totalTimeSincePosted - now) / 1000;
+  let timeDifference = Math.abs(totalTimeSincePosted - now) / 1000 ; 
 
   const days = Math.floor(timeDifference / 86400);
   timeDifference -= days * 86400;

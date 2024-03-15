@@ -8,7 +8,7 @@ function ProfileHero() {
   const [userData, setUserData] = useState({});
   const { userName } = useParams();
   const [isLoading, setIsLoading] = useState(true);
-  const tweetUserData = `http://localhost:3000/api/user/userName/${userName}`;
+  const tweetUserData = `https://twitter-api-6zi0.onrender.com/api/user/userName/${userName}`;
 
   useEffect(() => {
     const loadUserData = async () => {

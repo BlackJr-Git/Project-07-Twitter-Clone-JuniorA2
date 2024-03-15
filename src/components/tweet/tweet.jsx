@@ -1,33 +1,34 @@
 import { TweetAvatar, TweetContent, Loading } from "..";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { numberFormatter } from "../../utils/number-formatter";
 import fetchUserData from "../../utils/fetch-user-data";
 import dateFormatter from "../../utils/date-formatter";
+import UserContext from "../../contexts/user-context";
 
 function Tweet({ tweetData }) {
   const [like, setlike] = useState(numberFormatter(tweetData.favoriteCount));
+  const { currentUser } = useContext(UserContext);
   const [retweet, setretweet] = useState(
     numberFormatter(tweetData.retweetCount)
   );
   const [likeIcone, setLikeIcon] = useState("heart-outline");
 
   const [userData, setUserData] = useState({});
-  const tweetUserData = `http://localhost:3000/api/user/${tweetData.author}`;
+  const tweetUserData = `https://twitter-api-6zi0.onrender.com/api/user/${tweetData.author}`;
   // console.log(tweetData.author);
   const [isLoading, setIsLoading] = useState(false);
 
   function toggleLike() {
-    if (tweetData.isLiked == false) {
-      tweetData.favoriteCount = tweetData.favoriteCount + 1;
-      tweetData.isLiked = true;
-      tweetData.likeIcone = "heart";
-      setLikeIcon("heart");
+    if (currentUser.likedTweetIds.includes(tweetData.id)) {
+      tweetData.favoriteCount = tweetData.favoriteCount - 1;
+      // tweetData.isLiked = true;
+      // tweetData.likeIcone = "heart";
+      setLikeIcon("heart-outline");
       return tweetData.favoriteCount;
     } else {
-      tweetData.favoriteCount = tweetData.favoriteCount - 1;
-      tweetData.isLiked = false;
-      tweetData.likeIcone = "heart-outline";
-      setLikeIcon("heart-outline");
+      tweetData.favoriteCount = tweetData.favoriteCount + 1;
+      currentUser.likedTweetIds.push(tweetData.id)
+      setLikeIcon("heart");
       return tweetData.favoriteCount;
     }
   }
@@ -65,6 +66,10 @@ function Tweet({ tweetData }) {
         setIsLoading(false);
       }
     };
+
+    if (currentUser.likedTweetIds.includes(tweetData.id)) {
+      setLikeIcon("heart");
+    }
 
     loadUserData();
   }, []);
