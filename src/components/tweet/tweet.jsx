@@ -24,7 +24,6 @@ function Tweet({ tweetData }) {
       currentUser.likedTweetIds = currentUser.likedTweetIds.filter(
         (tweetId) => tweetId !== tweetData.id
       );
-      currentUser.likedTweetIds.pop();
       setLikeIcon("heart-outline");
       let formatedLike = numberFormatter(tweetData.favoriteCount);
       setlike(formatedLike);
