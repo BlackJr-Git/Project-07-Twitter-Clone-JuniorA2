@@ -6,30 +6,36 @@ import dateFormatter from "../../utils/date-formatter";
 import UserContext from "../../contexts/user-context";
 
 function Tweet({ tweetData }) {
-  const [like, setlike] = useState(numberFormatter(tweetData.favoriteCount));
+  const [userData, setUserData] = useState({});
   const { currentUser } = useContext(UserContext);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [like, setlike] = useState(numberFormatter(tweetData.favoriteCount));
   const [retweet, setretweet] = useState(
     numberFormatter(tweetData.retweetCount)
   );
   const [likeIcone, setLikeIcon] = useState("heart-outline");
 
-  const [userData, setUserData] = useState({});
   const tweetUserData = `https://twitter-api-6zi0.onrender.com/api/user/${tweetData.author}`;
-  // console.log(tweetData.author);
-  const [isLoading, setIsLoading] = useState(false);
 
   function toggleLike() {
     if (currentUser.likedTweetIds.includes(tweetData.id)) {
       tweetData.favoriteCount = tweetData.favoriteCount - 1;
-      // tweetData.isLiked = true;
-      // tweetData.likeIcone = "heart";
+      currentUser.likedTweetIds = currentUser.likedTweetIds.filter(
+        (tweetId) => tweetId !== tweetData.id
+      );
+      currentUser.likedTweetIds.pop();
       setLikeIcon("heart-outline");
-      return tweetData.favoriteCount;
+      let formatedLike = numberFormatter(tweetData.favoriteCount);
+      setlike(formatedLike);
+      return formatedLike;
     } else {
       tweetData.favoriteCount = tweetData.favoriteCount + 1;
-      currentUser.likedTweetIds.push(tweetData.id)
+      currentUser.likedTweetIds.push(tweetData.id);
       setLikeIcon("heart");
-      return tweetData.favoriteCount;
+      let formatedLike = numberFormatter(tweetData.favoriteCount);
+      setlike(formatedLike);
+      return formatedLike;
     }
   }
 
@@ -45,10 +51,6 @@ function Tweet({ tweetData }) {
     }
   }
 
-  const incrementLike = () => {
-    let formatedNumber = numberFormatter(toggleLike());
-    setlike(formatedNumber);
-  };
   const incrementRetweet = () => {
     setretweet(toggleRetweet());
   };
@@ -94,7 +96,7 @@ function Tweet({ tweetData }) {
             reply={numberFormatter(tweetData.repliesCount)}
             retweet={retweet}
             react={like}
-            addReactCount={incrementLike}
+            addReactCount={toggleLike}
             addRetweetCount={incrementRetweet}
             iconType={likeIcone}
           />
