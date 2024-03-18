@@ -16,7 +16,6 @@ function ProfileHero() {
       try {
         const data = await fetchUserData(tweetUserData);
         setUserData(data);
-        console.log(data);
       } catch (error) {
         console.error("Failed to fetch data:", error);
         // setIsFailed(true);

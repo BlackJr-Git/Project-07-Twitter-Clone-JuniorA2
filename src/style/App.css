@@ -177,13 +177,14 @@ body {
 }
 
 .tweet-image img {
-  max-width: 100%;
+  min-width: 100%;
   height: auto;
   height: 300px;
   border-radius: 50px;
   border-color: #2f3336;
   border-style: solid;
   border-width: 1px;
+  object-fit: cover;
 }
 
 .tweet-actions {

@@ -1,6 +1,6 @@
 import { AccountFollow, ShowMore } from "../index";
 import { twitterAvatar , nytimesAvatar ,cnnAvatar } from "../../images" ;
-import { tweetData } from "../../utils/tweet-data";
+import { tweetData } from "../../data/tweet-data";
 
 
 function FollowList() {

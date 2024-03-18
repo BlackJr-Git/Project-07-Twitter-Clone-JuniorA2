@@ -1,7 +1,7 @@
 // import React, { useEffect, useState } from "react";
 // import { fetchData } from "../utils/fetch-data";
 import UserContext from "./user-context";
-import { userData } from "../utils/user-data";
+import { userData } from "../data/user-data";
 
 // const tweetList = await fetchData()  
 

@@ -1,4 +1,4 @@
-import { userData } from "../../utils/user-data";
+import { userData } from "../../data/user-data";
 import { TweetAvatar,UserInfo } from "../index" ;
 import UserContext from "../../contexts/user-context";
 import { useContext } from "react";
